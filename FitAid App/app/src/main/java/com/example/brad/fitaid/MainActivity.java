@@ -35,13 +35,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Spinners
      **/
-    Spinner spinWorkout;
+
 
     /**
      * Adapters
      **/
 
-    ImageView imgTicker;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -84,39 +84,6 @@ public class MainActivity extends AppCompatActivity {
         imgNavBar = findViewById(R.id.img_TopNav);
 
 
-
-        imgTicker = findViewById(R.id.img_ticker);
-
-        String[] workoutArray = getResources().getStringArray(R.array.workouts);
-        List<String> workoutList = Arrays.asList(workoutArray);
-        Collections.sort(workoutList); //Workout array will be sorted
-
-        spinWorkout = findViewById(R.id.sp_workout);
-        ArrayAdapter adaptSpinWorkout = new ArrayAdapter(this, R.layout.spinner_item, workoutList);
-        adaptSpinWorkout.setDropDownViewResource(R.layout.spinner_item_dropdown);
-        spinWorkout.setAdapter(adaptSpinWorkout);
-        spinWorkout.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                if (spinWorkout.getSelectedItem().toString().equals("Chest")) {
-                    imgTicker.setImageResource(R.drawable.chest);
-                } else if (spinWorkout.getSelectedItem().toString().equals("Shoulders")) {
-                    imgTicker.setImageResource(R.drawable.shoulders);
-                } else if (spinWorkout.getSelectedItem().toString().equals("Abs")) {
-                    imgTicker.setImageResource(R.drawable.abs);
-                } else if (spinWorkout.getSelectedItem().toString().equals("Biceps")) {
-                    imgTicker.setImageResource(R.drawable.shoulders);
-                }
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                // your code here
-            }
-
-        });
     }
 
 
@@ -155,7 +122,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void profileClicked(View target) {
+
         imgNavBar.setImageResource(R.drawable.bottom_menu);
+
     }
 
     public void journalClicked(View target) {
@@ -164,6 +133,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void workoutsClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_green);
+
+        WorkoutFragment workoutFragment = new WorkoutFragment();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.secondLayout, workoutFragment, workoutFragment.getTag())
+                .commit();
     }
 
     public void settingsClicked(View target) {
