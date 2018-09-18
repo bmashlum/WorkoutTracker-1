@@ -61,7 +61,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toEndOf="@+id/img_ticker"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_dropdown" />

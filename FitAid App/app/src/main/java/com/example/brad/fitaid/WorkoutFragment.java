@@ -36,7 +36,6 @@ public class WorkoutFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,13 +58,18 @@ public class WorkoutFragment extends Fragment {
                 if (spinWorkout.getSelectedItem().toString().equals("Chest")) {
                     imgTicker.setImageResource(R.drawable.chest);
                 } else if (spinWorkout.getSelectedItem().toString().equals("Shoulders")) {
-                    imgTicker.setImageResource(R.drawable.shoulders);
+                    imgTicker.setImageResource(R.drawable.arms);
                 } else if (spinWorkout.getSelectedItem().toString().equals("Abs")) {
                     imgTicker.setImageResource(R.drawable.abs);
                 } else if (spinWorkout.getSelectedItem().toString().equals("Biceps")) {
-                    imgTicker.setImageResource(R.drawable.shoulders);
+                    imgTicker.setImageResource(R.drawable.arms);
+                } else if (spinWorkout.getSelectedItem().toString().equals("Triceps")) {
+                    imgTicker.setImageResource(R.drawable.arms);
+                } else if (spinWorkout.getSelectedItem().toString().equals("Legs")) {
+                    imgTicker.setImageResource(R.drawable.legs);
+                } else if (spinWorkout.getSelectedItem().toString().equals("Back")) {
+                    imgTicker.setImageResource(R.drawable.back);
                 }
-
             }
 
             @Override

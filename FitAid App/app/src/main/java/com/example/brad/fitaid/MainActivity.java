@@ -1,5 +1,6 @@
 package com.example.brad.fitaid;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import static com.example.brad.fitaid.R.id.mainLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ProfileFragment profileFragment = new ProfileFragment();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.secondLayout,profileFragment,profileFragment.getTag())
+                .commit();
 
 
         Window window = getWindow();
@@ -122,13 +130,23 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void profileClicked(View target) {
-
         imgNavBar.setImageResource(R.drawable.bottom_menu);
 
+        ProfileFragment profileFragment = new ProfileFragment();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.secondLayout,profileFragment,profileFragment.getTag())
+                .commit();
     }
 
     public void journalClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_yellow);
+
+        JournalFragment journalFragment = new JournalFragment();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        manager.beginTransaction()
+                .replace(R.id.secondLayout,journalFragment,journalFragment.getTag())
+                .commit();
     }
 
     public void workoutsClicked(View target) {
@@ -139,7 +157,9 @@ public class MainActivity extends AppCompatActivity {
         manager.beginTransaction()
                 .replace(R.id.secondLayout, workoutFragment, workoutFragment.getTag())
                 .commit();
+
     }
+
 
     public void settingsClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_blue);

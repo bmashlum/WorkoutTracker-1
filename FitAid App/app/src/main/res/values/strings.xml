@@ -4,10 +4,12 @@
 
     <string-array name="workouts">
         <item>Chest</item>
+        <item>Back</item>
         <item>Shoulders</item>
         <item>Biceps</item>
         <item>Triceps</item>
         <item>Abs</item>
+        <item>Legs</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
