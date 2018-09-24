@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
      **/
 
 
-
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         ProfileFragment profileFragment = new ProfileFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
-                .replace(R.id.secondLayout,profileFragment,profileFragment.getTag())
+                .replace(R.id.secondLayout, profileFragment, profileFragment.getTag())
                 .commit();
 
 
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         ProfileFragment profileFragment = new ProfileFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
-                .replace(R.id.secondLayout,profileFragment,profileFragment.getTag())
+                .replace(R.id.secondLayout, profileFragment, profileFragment.getTag())
                 .commit();
     }
 
@@ -145,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
         JournalFragment journalFragment = new JournalFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
-                .replace(R.id.secondLayout,journalFragment,journalFragment.getTag())
+                .replace(R.id.secondLayout, journalFragment, journalFragment.getTag())
                 .commit();
     }
 
