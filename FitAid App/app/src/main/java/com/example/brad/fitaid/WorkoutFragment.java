@@ -40,7 +40,7 @@ public class WorkoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_workout,container,false);
+        View v = inflater.inflate(R.layout.fragment_workout, container, false);
         imgTicker = v.findViewById(R.id.img_ticker);
 
         String[] workoutArray = getResources().getStringArray(R.array.workouts);
