@@ -41,6 +41,7 @@ public class SignInActivity extends AppCompatActivity {
                 String email = _txtemail.getText().toString();
                 String phone = _txtphone.getText().toString();
                 insertdata( fname, lname, pass, email, phone );
+
                 Toast.makeText( getApplicationContext(), "register successfully", Toast.LENGTH_LONG ).show();
                 Intent go3 = new Intent( SignInActivity.this, LoginActivity.class );
                 startActivity(go3);
