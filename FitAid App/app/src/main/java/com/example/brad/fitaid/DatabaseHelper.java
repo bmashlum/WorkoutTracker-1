@@ -6,14 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper  extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME="fitaidregister.db";
-    public static final String TABLE_NAME = "register";
+    public static final String DATABASE_NAME="fitaidregister2.db";
+    public static final String TABLE_NAME = "register2";
     public static final String COL_1 = "ID";
-    public static final String COL_2 ="FirstName";
-    public static final String COL_3 ="LastName";
-    public static final String COL_4 ="Password";
-    public static final String COL_5 ="Email";
-    public static final String COL_6 ="Phone";
+    public static final String COL_2 ="Email";
+    public static final String COL_3 ="FirstName";
+    public static final String COL_4 ="LastName";
+    public static final String COL_5 ="Password";
+//    public static final String COL_6 ="Pass2";
 
     public DatabaseHelper(Context context) {
         super( context, DATABASE_NAME, null, 1 );
@@ -21,7 +21,7 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL( String.format( "CREATE TABLE '%s'( ID INTEGER PRIMARY KEY AUTOINCREMENT, FirstName TEXT, LastName TEXT, Password TEXT, Email TEXT, Phone TEXT)", TABLE_NAME ) );
+        db.execSQL( String.format( "CREATE TABLE '%s'( ID INTEGER PRIMARY KEY AUTOINCREMENT, Email TEXT, FirstName TEXT, LastName TEXT, Password TEXT)", TABLE_NAME ) );
 
     }
 
