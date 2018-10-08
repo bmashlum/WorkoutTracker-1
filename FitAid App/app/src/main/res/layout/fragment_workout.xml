@@ -31,8 +31,9 @@
         android:layout_marginTop="192dp"
         android:background="@android:color/transparent"
         android:dropDownVerticalOffset="50dp"
-        android:popupBackground="#33aaaaaa"
+        android:popupBackground="#3d3c44"
         android:spinnerMode="dropdown"
+        android:popupTheme="@style/AppTheme.PopupOverlay"
         app:layout_constraintBottom_toBottomOf="@+id/img_ticker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,4 +66,18 @@
         app:layout_constraintStart_toEndOf="@+id/img_ticker"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_dropdown" />
+
+    <ListView
+        android:id="@+id/lvExercises"
+        android:layout_width="375dp"
+        android:layout_height="337dp"
+        android:layout_marginTop="8dp"
+        android:choiceMode="multipleChoice"
+        android:listSelector="@drawable/listselector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_ticker"
+        app:layout_constraintVertical_bias="0.247" />
 </android.support.constraint.ConstraintLayout>
