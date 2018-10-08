@@ -9,14 +9,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.SimpleTimeZone;
 
@@ -25,14 +29,16 @@ import java.util.SimpleTimeZone;
  * A simple {@link Fragment} subclass.
  */
 public class JournalFragment extends Fragment {
-
+    private ListView lvJournalEntries;
     private TextView tvDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-
+    private ArrayList<String> journalEntriesAdded;
+    private ArrayAdapter adapter;
 
     public JournalFragment() {
         // Required empty public constructor
     }
+
 
 
     @Override
@@ -40,6 +46,13 @@ public class JournalFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_journal, container, false);
+
+        lvJournalEntries = v.findViewById(R.id.lvJournalEntries);
+
+        lvJournalEntries.setAdapter(adapter);
+        adapter = new ArrayAdapter<>(getContext(), R.layout.list_view, journalEntriesAdded);
+
+
 
         tvDisplayDate = v.findViewById(R.id.tvDate);
         String date_n = new SimpleDateFormat("M/dd/yyyy", Locale.getDefault()).format(new Date());
@@ -75,4 +88,10 @@ public class JournalFragment extends Fragment {
         return v;
     }
 
+    protected void displayReceivedData(ArrayList<String> input)
+    {
+        adapter = new ArrayAdapter<>(getContext(), R.layout.list_view, input);
+        lvJournalEntries.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+    }
 }

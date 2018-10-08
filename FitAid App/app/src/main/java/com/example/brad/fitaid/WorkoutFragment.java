@@ -1,9 +1,13 @@
 package com.example.brad.fitaid;
 
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +15,12 @@ import android.support.v4.app.Fragment;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,35 +33,32 @@ import static android.R.color.holo_orange_light;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WorkoutFragment extends Fragment implements AdapterView.OnItemClickListener {
-
-    ListView lvExercises;
-    Spinner spinWorkout;
-    List exercise_list;
-    ArrayAdapter exerArrayAdapter;
-    ImageView imgTicker;
-    boolean[] chestCheck,backCheck,absCheck,legsCheck,bicepCheck,tricepCheck,shoulderCheck;
+public class WorkoutFragment extends Fragment {
+    private FragmentAListener listener;
+    private ArrayList<String> exercisesClicked = new ArrayList<>();
+    private ListView lvExercises;
+    private Spinner spinWorkout;
+    private ImageView imgTicker;
+    private Button addToJournal;
+    private String [] exercises,chest,back,abs,legs,biceps,triceps,shoulders;
 
     public WorkoutFragment() {
         // Required empty public constructor
     }
 
+    public interface FragmentAListener {
+        void onInputASent(ArrayList<String> input);
+    }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_workout, container, false);
 
 
-        final String [] chest;
-        final String [] back;
-        final String [] abs;
-        final String [] legs;
-        final String [] biceps;
-        final String [] triceps;
-        final String [] shoulders;
-
+        exercises = getResources().getStringArray(R.array.exercises);
         chest = getResources().getStringArray(R.array.ex_chest);
         back = getResources().getStringArray(R.array.ex_back);
         abs = getResources().getStringArray(R.array.ex_abs);
@@ -64,45 +67,21 @@ public class WorkoutFragment extends Fragment implements AdapterView.OnItemClick
         triceps = getResources().getStringArray(R.array.ex_triceps);
         shoulders = getResources().getStringArray(R.array.ex_shoulders);
 
-        chestCheck = new boolean [chest.length];
 
         lvExercises = v.findViewById(R.id.lvExercises);
-        exercise_list  = new ArrayList();
+        lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-
-        exerArrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,
-                exercise_list) {
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-
-                TextView textView = view.findViewById(android.R.id.text1);
-                textView.setTextColor(Color.WHITE);
-
-                return view;
-            }
-        };
-
-
-        lvExercises.setAdapter(exerArrayAdapter);
-        lvExercises.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //lvExercises.getChildAt(position).setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
-                lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-                lvExercises.setItemsCanFocus(false);
-                exerArrayAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
 
         imgTicker = v.findViewById(R.id.img_ticker);
+
+        addToJournal = v.findViewById(R.id.btn_AddToJournal);
+        addToJournal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"You are adding " + exercisesClicked.toString() +" to your journal", Toast.LENGTH_SHORT).show();
+                listener.onInputASent(exercisesClicked);
+            }
+        });
 
         String[] workoutArray = getResources().getStringArray(R.array.workouts);
         List<String> workoutList = Arrays.asList(workoutArray);
@@ -116,36 +95,65 @@ public class WorkoutFragment extends Fragment implements AdapterView.OnItemClick
 
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String pos = parentView.getItemAtPosition(position).toString();
+                final String pos = parentView.getItemAtPosition(position).toString();
+                final ArrayAdapter<String> adapter;
+
+                lvExercises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        String pos = parent.getItemAtPosition(position).toString();
+
+
+
+                        if(lvExercises.isItemChecked(position)) {
+                            exercisesClicked.remove(pos);
+                            Toast.makeText(getContext(),"You have selected " + pos, Toast.LENGTH_SHORT).show();
+                            exercisesClicked.add(pos);
+                            System.out.println("EXERCISES CLICKED: " + exercisesClicked);
+                        }
+                        else if(!lvExercises.isItemChecked(position)){
+                            exercisesClicked.remove(pos);
+                            System.out.println("EXERCISES CLICKED: " + exercisesClicked);
+                        }
+                    }
+                });
 
                 if (pos.compareToIgnoreCase("Chest") == 0) {
                     imgTicker.setImageResource(R.drawable.chest);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, chest);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, chest);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+
                 } else if (pos.compareToIgnoreCase("Shoulders") == 0) {
                     imgTicker.setImageResource(R.drawable.arms);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, shoulders);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, shoulders);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Abs") == 0) {
                     imgTicker.setImageResource(R.drawable.abs);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, abs);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, abs);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Biceps") == 0) {
                     imgTicker.setImageResource(R.drawable.arms);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, biceps);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, biceps);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Triceps") == 0) {
                     imgTicker.setImageResource(R.drawable.arms);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, triceps);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, triceps);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Legs") == 0) {
                     imgTicker.setImageResource(R.drawable.legs);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, legs);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, legs);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Back") == 0) {
                     imgTicker.setImageResource(R.drawable.back);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, back);
+                    adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, back);
                     lvExercises.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
                 }
             }
 
@@ -161,8 +169,21 @@ public class WorkoutFragment extends Fragment implements AdapterView.OnItemClick
 
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof FragmentAListener) {
+            listener = (FragmentAListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+            + " must implement FragmentAListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener = null;
     }
 }

@@ -59,7 +59,49 @@
         <item>Calf Raise</item>
         <item>Seated Calf Raise</item>
     </string-array>
-
+    <string-array name="exercises">
+        <item>Squat</item>
+        <item>Leg Extension</item>
+        <item>Leg Press</item>
+        <item>Seated Leg Curl</item>
+        <item>Lying Leg Curl</item>
+        <item>Calf Raise</item>
+        <item>Seated Calf Raise</item>
+        <item>Shoulder Press</item>
+        <item>Dumbbell Fly</item>
+        <item>Dumbbell Rear Fly</item>
+        <item>Tricep Pushdown</item>
+        <item>Rope Pushdown</item>
+        <item>Bent-over Tricep Kickback</item>
+        <item>Standing Dumbell Curl</item>
+        <item>Standing Barbell Curl</item>
+        <item>Seated Curl</item>
+        <item>Incline Dumbbell Curl</item>
+        <item>Bicep Face Pull</item>
+        <item>Pullup</item>
+        <item>Lat Pulldown</item>
+        <item>Barbell Row</item>
+        <item>Dumbbell Row</item>
+        <item>Seated Row</item>
+        <item>Inverse Pulldown</item>
+        <item>Barbell Bench Press</item>
+        <item>Dumbbell Bench Press</item>
+        <item>Incline Barbell Bench Press</item>
+        <item>Incline Dumbbell Bench Press</item>
+        <item>Chest Fly</item>
+        <item>Pushup</item>
+        <item>Crunch</item>
+        <item>Reverse Crunch</item>
+        <item>Russian Twist</item>
+        <item>Hanging Leg Raise</item>
+        <item>Chest</item>
+        <item>Back</item>
+        <item>Shoulders</item>
+        <item>Biceps</item>
+        <item>Triceps</item>
+        <item>Abs</item>
+        <item>Legs</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main2">Main2Activity</string>

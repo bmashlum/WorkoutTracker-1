@@ -23,36 +23,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import static com.example.brad.fitaid.R.id.journFragLayout;
 import static com.example.brad.fitaid.R.id.mainLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements WorkoutFragment.FragmentAListener {
 
 
 
     private static final String DEBUGTAG = "JWP";
+    private WorkoutFragment workoutFragment;
+    private JournalFragment journalFragment;
 
-    /**
-     * Buttons
-     **/
     Button btnProfile, btnJournal, btnWorkouts, btnSettings;
-    /**
-     * ImageViews
-     **/
+
     ImageView imgNavBar, imgNavBarColors;
-    /**
-     * Spinners
-     **/
 
 
-    /**
-     * Adapters
-     **/
 
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -173,5 +166,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void settingsClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_blue);
+    }
+
+
+    @Override
+    public void onInputASent(ArrayList<String> input) {
+        journalFragment.displayReceivedData(input);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
