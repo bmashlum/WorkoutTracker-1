@@ -137,6 +137,9 @@ public class DatabaseHelper  extends SQLiteOpenHelper {
         return exist;
     }
 
+
+
+
 //    public String getObjectKey(String email){
 //        SQLiteDatabase db = this.getWritableDatabase();
 //        String selectString = "SELECT ID FROM " + TABLE_NAME + "WHERE " + COL_2 + "= ?";
