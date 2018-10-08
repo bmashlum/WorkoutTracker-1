@@ -89,7 +89,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/info"
+        android:id="@+id/tvForgotPassword"
         android:layout_width="219dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
@@ -98,6 +98,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:text="forgot password?"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -4,8 +4,9 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v7.app.AppCompatActivity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +32,7 @@ public class SignInActivity extends AppCompatActivity {
         _txtemail = (EditText) findViewById( R.id.txtemail );
         _txtpass2 = (EditText) findViewById( R.id.txtpass2 );
 
+
         _btnreg.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +43,10 @@ public class SignInActivity extends AppCompatActivity {
                 String email = _txtemail.getText().toString();
                 String pass2 = _txtpass2.getText().toString();
 
+
+                String[] recipient = email.split( "," );
+                String subject = "Thank you for signup";
+                String message = "Thank you for signing up to FitAid";
 
 //                if ((fname.equals( "" )) || (lname.equals( "" )) || (pass.equals( "" )) || (email.equals( "" )) || (phone.equals( "" ))){
 //                    //Toast.makeText( getApplicationContext(), "register successfully", Toast.LENGTH_LONG ).show();
@@ -70,6 +76,14 @@ public class SignInActivity extends AppCompatActivity {
                     Toast.makeText( getApplicationContext(), "register successfully", Toast.LENGTH_LONG ).show();
                     Intent go3 = new Intent( SignInActivity.this, LoginActivity.class );
                     startActivity( go3 );
+
+                    Intent send = new Intent(Intent.ACTION_SEND);
+                    send.setData( Uri.parse("mailto:") );
+                    send.putExtra(Intent.EXTRA_EMAIL, recipient);
+                    send.putExtra(Intent.EXTRA_SUBJECT, subject);
+                    send.putExtra(Intent.EXTRA_TEXT, message);
+                    send.setType( "message/rfc822" );
+                    startActivity( Intent.createChooser( send, "" ) );
                 }
                 else{
                     Toast.makeText( getApplicationContext(), "retype does not match password", Toast.LENGTH_LONG ).show();
@@ -94,5 +108,7 @@ public class SignInActivity extends AppCompatActivity {
 
         long id = db.insert(DatabaseHelper.TABLE_NAME, null, contentValues);
     }
+
+
     }
 
