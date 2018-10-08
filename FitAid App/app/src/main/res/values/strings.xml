@@ -11,6 +11,54 @@
         <item>Abs</item>
         <item>Legs</item>
     </string-array>
+    <string-array name="ex_abs">
+        <item>Crunch</item>
+        <item>Reverse Crunch</item>
+        <item>Russian Twist</item>
+        <item>Hanging Leg Raise</item>
+    </string-array>
+    <string-array name="ex_chest">
+        <item>Barbell Bench Press</item>
+        <item>Dumbbell Bench Press</item>
+        <item>Incline Barbell Bench Press</item>
+        <item>Incline Dumbbell Bench Press</item>
+        <item>Chest Fly</item>
+        <item>Pushup</item>
+    </string-array>
+    <string-array name="ex_back">
+        <item>Pullup</item>
+        <item>Lat Pulldown</item>
+        <item>Barbell Row</item>
+        <item>Dumbbell Row</item>
+        <item>Seated Row</item>
+        <item>Inverse Pulldown</item>
+    </string-array>
+    <string-array name="ex_biceps">
+        <item>Standing Dumbell Curl</item>
+        <item>Standing Barbell Curl</item>
+        <item>Seated Curl</item>
+        <item>Incline Dumbbell Curl</item>
+        <item>Bicep Face Pull</item>
+    </string-array>
+    <string-array name="ex_triceps">
+        <item>Tricep Pushdown</item>
+        <item>Rope Pushdown</item>
+        <item>Bent-over Tricep Kickback</item>
+    </string-array>
+    <string-array name="ex_shoulders">
+        <item>Shoulder Press</item>
+        <item>Dumbbell Fly</item>
+        <item>Dumbbell Rear Fly</item>
+    </string-array>
+    <string-array name="ex_legs">
+        <item>Squat</item>
+        <item>Leg Extension</item>
+        <item>Leg Press</item>
+        <item>Seated Leg Curl</item>
+        <item>Lying Leg Curl</item>
+        <item>Calf Raise</item>
+        <item>Seated Calf Raise</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

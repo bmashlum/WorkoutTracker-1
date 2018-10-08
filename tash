@@ -1,0 +1,32 @@
+ FitAid App/.idea/caches/build_file_checksums.ser   | Bin [31m541[m -> [32m536[m bytes
+ .../Gradle__android_arch_core_runtime_1_1_0.xml    |   4 [32m+[m[31m-[m
+ ..._android_arch_lifecycle_livedata_core_1_1_0.xml |   4 [32m+[m[31m-[m
+ ...radle__android_arch_lifecycle_runtime_1_1_0.xml |   4 [32m+[m[31m-[m
+ ...dle__android_arch_lifecycle_viewmodel_1_1_0.xml |   4 [32m+[m[31m-[m
+ ...oid_support_animated_vector_drawable_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...le__com_android_support_appcompat_v7_27_1_1.xml |   4 [32m+[m[31m-[m
+ ..._support_constraint_constraint_layout_1_1_1.xml |   4 [32m+[m[31m-[m
+ .../Gradle__com_android_support_design_27_1_1.xml  |   4 [32m+[m[31m-[m
+ ..._com_android_support_recyclerview_v7_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...__com_android_support_support_compat_27_1_1.xml |   4 [32m+[m[31m-[m
+ ..._com_android_support_support_core_ui_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...m_android_support_support_core_utils_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...com_android_support_support_fragment_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...android_support_support_media_compat_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...adle__com_android_support_support_v4_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...roid_support_support_vector_drawable_27_1_1.xml |   4 [32m+[m[31m-[m
+ ...d_support_test_espresso_espresso_core_3_0_2.xml |   4 [32m+[m[31m-[m
+ ...est_espresso_espresso_idling_resource_3_0_2.xml |   4 [32m+[m[31m-[m
+ ...dle__com_android_support_test_monitor_1_0_2.xml |   4 [32m+[m[31m-[m
+ ...adle__com_android_support_test_runner_1_0_2.xml |   4 [32m+[m[31m-[m
+ ...adle__com_android_support_transition_27_1_1.xml |   4 [32m+[m[31m-[m
+ .../java/com/example/brad/fitaid/MainActivity.java |   1 [32m+[m
+ .../com/example/brad/fitaid/WorkoutFragment.java   | 114 [32m++++++++++++++++++[m[31m---[m
+ .../app/src/main/res/layout/activity_signin.xml    |   2 [32m+[m
+ .../app/src/main/res/layout/fragment_profile.xml   |   2 [32m+[m[31m-[m
+ .../app/src/main/res/layout/fragment_workout.xml   |  17 [32m++[m[31m-[m
+ .../app/src/main/res/layout/spinner_item.xml       |   3 [32m+[m[31m-[m
+ .../src/main/res/layout/spinner_item_dropdown.xml  |   2 [32m+[m[31m-[m
+ FitAid App/app/src/main/res/values/strings.xml     |  48 [32m+++++++++[m
+ FitAid App/app/src/main/res/values/styles.xml      |   4 [32m+[m[31m-[m
+ 31 files changed, 213 insertions(+), 64 deletions(-)

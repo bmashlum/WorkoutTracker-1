@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:ellipsize="marquee"
-    android:fontFamily="serif-monospace"
+    android:fontFamily="sans-serif"
     android:gravity="center_vertical"
     android:lineSpacingExtra="25dp"
     android:singleLine="true"
