@@ -1,10 +1,14 @@
 package com.example.brad.fitaid;
 
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +26,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.SimpleTimeZone;
 
 
@@ -32,26 +37,20 @@ public class JournalFragment extends Fragment {
     private ListView lvJournalEntries;
     private TextView tvDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    private ArrayList<String> journalEntriesAdded;
-    private ArrayAdapter adapter;
+    ArrayList<String> dummy = new ArrayList<>();
+    ArrayAdapter adapter;
 
     public JournalFragment() {
-        // Required empty public constructor
+
     }
 
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_journal, container, false);
 
         lvJournalEntries = v.findViewById(R.id.lvJournalEntries);
-
-        lvJournalEntries.setAdapter(adapter);
-        adapter = new ArrayAdapter<>(getContext(), R.layout.list_view, journalEntriesAdded);
-
 
 
         tvDisplayDate = v.findViewById(R.id.tvDate);
@@ -85,12 +84,15 @@ public class JournalFragment extends Fragment {
         };
 
 
+
         return v;
     }
 
+
     protected void displayReceivedData(ArrayList<String> input)
     {
-        adapter = new ArrayAdapter<>(getContext(), R.layout.list_view, input);
+        adapter = new ArrayAdapter<>(getContext().getApplicationContext(), R.layout.list_view, input);
+
         lvJournalEntries.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }

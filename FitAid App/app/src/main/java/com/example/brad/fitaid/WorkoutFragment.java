@@ -79,6 +79,8 @@ public class WorkoutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"You are adding " + exercisesClicked.toString() +" to your journal", Toast.LENGTH_SHORT).show();
+
+                System.out.println("****listener:" + listener);
                 listener.onInputASent(exercisesClicked);
             }
         });
@@ -132,6 +134,7 @@ public class WorkoutFragment extends Fragment {
                 } else if (pos.compareToIgnoreCase("Abs") == 0) {
                     imgTicker.setImageResource(R.drawable.abs);
                     adapter = new ArrayAdapter<>(getContext(),R.layout.list_view, abs);
+                    System.out.println("****** getContext: " + getContext());
                     lvExercises.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 } else if (pos.compareToIgnoreCase("Biceps") == 0) {

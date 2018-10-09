@@ -38,15 +38,16 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
 
 
     private static final String DEBUGTAG = "JWP";
-    private WorkoutFragment workoutFragment;
-    private JournalFragment journalFragment;
+    private WorkoutFragment workoutFragment = new WorkoutFragment();
+    private JournalFragment journalFragment = new JournalFragment();
 
     Button btnProfile, btnJournal, btnWorkouts, btnSettings;
 
     ImageView imgNavBar, imgNavBarColors;
 
+    public MainActivity() {
 
-
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -171,6 +172,7 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
 
     @Override
     public void onInputASent(ArrayList<String> input) {
+        System.out.println("***** journalFragment: " + journalFragment);
         journalFragment.displayReceivedData(input);
     }
 
