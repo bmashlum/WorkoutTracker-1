@@ -1,54 +1,55 @@
 package com.example.brad.fitaid;
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.app.Fragment;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
-
-import static android.R.color.holo_orange_light;
+import java.util.Locale;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class WorkoutFragment extends Fragment {
-    private FragmentAListener listener;
+    //private FragmentAListener listener;
     private ArrayList<String> exercisesClicked = new ArrayList<>();
     private ListView lvExercises;
     private Spinner spinWorkout;
     private ImageView imgTicker;
     private Button addToJournal;
     private String [] exercises,chest,back,abs,legs,biceps,triceps,shoulders;
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref = database.getReference("server/workoutsChosen");
 
     public WorkoutFragment() {
         // Required empty public constructor
     }
 
-    public interface FragmentAListener {
+    /**public interface FragmentAListener {
         void onInputASent(ArrayList<String> input);
-    }
+    }*/
 
     @Nullable
     @Override
@@ -71,6 +72,7 @@ public class WorkoutFragment extends Fragment {
         lvExercises = v.findViewById(R.id.lvExercises);
         lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
+        final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
 
         imgTicker = v.findViewById(R.id.img_ticker);
 
@@ -78,10 +80,19 @@ public class WorkoutFragment extends Fragment {
         addToJournal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                HashMap<String, String> exerciseMap = new HashMap<String, String>();
+                for (String exercise : exercisesClicked) {
+                    exerciseMap.put(exercise, date_n);
+                }
+                ref.setValue(exerciseMap);
+
+                System.out.println(exerciseMap.toString());
+
                 Toast.makeText(getContext(),"You are adding " + exercisesClicked.toString() +" to your journal", Toast.LENGTH_SHORT).show();
 
-                System.out.println("****listener:" + listener);
-                listener.onInputASent(exercisesClicked);
+                //System.out.println("****listenerWorkout:" + listener);
+                //listener.onInputASent(exercisesClicked);
             }
         });
 
@@ -170,23 +181,28 @@ public class WorkoutFragment extends Fragment {
         // Inflate the layout for this fragment
         return v;
 
-    }
+    }}
 
+   /** public void updateEditText(ArrayList<String> newtext) {
+        editText.setText(newText);
+    }*/
 
-    @Override
+    /**@Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(context instanceof FragmentAListener) {
+        System.out.println("**** onAttachWorkout");
+        if (context instanceof FragmentAListener) {
             listener = (FragmentAListener) context;
         } else {
             throw new RuntimeException(context.toString()
-            + " must implement FragmentAListener");
+                    + " must implement FragmentAListener");
         }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        listener = null;
+        System.out.println("ONDETACH WORKOUT");
+        //listener = null;
     }
-}
+}*/

@@ -1,45 +1,46 @@
 package com.example.brad.fitaid;
 
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.DateFormat;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collections;
-import java.util.GregorianCalendar;
-import java.util.List;
 
-import static com.example.brad.fitaid.R.id.journFragLayout;
-import static com.example.brad.fitaid.R.id.mainLayout;
-
-public class MainActivity extends AppCompatActivity implements WorkoutFragment.FragmentAListener {
+public class MainActivity extends AppCompatActivity {
 
 
 
     private static final String DEBUGTAG = "JWP";
-    private WorkoutFragment workoutFragment = new WorkoutFragment();
-    private JournalFragment journalFragment = new JournalFragment();
+    private WorkoutFragment fragmentA;
+    private JournalFragment fragmentB;
+    private ProfileFragment profileFragment;
+    final FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref = database.getReference("server/workoutsChosen");
 
     Button btnProfile, btnJournal, btnWorkouts, btnSettings;
 
@@ -49,17 +50,54 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ref.removeValue();
+    }
+
+    public class AlarmReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // show toast
+            Toast.makeText(context, "Alarm running", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ProfileFragment profileFragment = new ProfileFragment();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        if (!prefs.getBoolean("firstTime", false)) {
+            Intent alarmIntent = new Intent(this, AlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
+            AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTimeInMillis(System.currentTimeMillis());
+            calendar.set(Calendar.HOUR_OF_DAY, 11);
+            calendar.set(Calendar.MINUTE, 20);
+            calendar.set(Calendar.SECOND, 1);
+            manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("firstTime", true);
+            editor.apply();
+        }
+
+        profileFragment = new ProfileFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.secondLayout, profileFragment, profileFragment.getTag())
                 .commit();
+
+        fragmentA = new WorkoutFragment();
+        fragmentB = new JournalFragment();
 
 
         Window window = getWindow();
@@ -136,7 +174,6 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
     public void profileClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu);
 
-        ProfileFragment profileFragment = new ProfileFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
                 .replace(R.id.secondLayout, profileFragment, profileFragment.getTag())
@@ -145,21 +182,20 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
 
     public void journalClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_yellow);
-
-        JournalFragment journalFragment = new JournalFragment();
+        System.out.println("JOURNAL CLICKED");
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
-                .replace(R.id.secondLayout, journalFragment, journalFragment.getTag())
+                .replace(R.id.secondLayout, fragmentB, fragmentB.getTag())
                 .commit();
+
     }
 
     public void workoutsClicked(View target) {
         imgNavBar.setImageResource(R.drawable.bottom_menu_green);
 
-        WorkoutFragment workoutFragment = new WorkoutFragment();
         android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction()
-                .replace(R.id.secondLayout, workoutFragment, workoutFragment.getTag())
+                .replace(R.id.secondLayout, fragmentA, fragmentA.getTag())
                 .commit();
 
     }
@@ -170,14 +206,26 @@ public class MainActivity extends AppCompatActivity implements WorkoutFragment.F
     }
 
 
-    @Override
+    /**@Override
     public void onInputASent(ArrayList<String> input) {
         System.out.println("***** journalFragment: " + journalFragment);
         journalFragment.displayReceivedData(input);
     }
-
+    */
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+    /**@Override
+    public void onInputASent(ArrayList<String> input) {
+        System.out.println("**INPUT " + input);
+        System.out.println("ISFRAGNULL" + fragmentB.getContext());
+        fragmentB.updateEditText(input);
+    }
+
+    @Override
+    public void onInputBSent(CharSequence input) {
+
+    }*/
 }
