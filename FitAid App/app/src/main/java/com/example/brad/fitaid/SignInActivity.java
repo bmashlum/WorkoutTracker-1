@@ -65,6 +65,9 @@ public class SignInActivity extends AppCompatActivity {
 ////                    startActivity( go3 );
 //                    Toast.makeText( getApplicationContext(), "not all fields are full", Toast.LENGTH_LONG ).show();
 //                }
+                if ((email.equals( "" ))) {
+                    Toast.makeText( getApplicationContext(), "Please enter Your Email", Toast.LENGTH_LONG ).show();
+                }
                 if ((fname.equals( "" ))) {
                     Toast.makeText( getApplicationContext(), "Please enter first name", Toast.LENGTH_LONG ).show();
                 }
@@ -74,11 +77,12 @@ public class SignInActivity extends AppCompatActivity {
                 if ((pass.equals( "" ))) {
                     Toast.makeText( getApplicationContext(), "Please enter password", Toast.LENGTH_LONG ).show();
                 }
-                if ((email.equals( "" ))) {
-                    Toast.makeText( getApplicationContext(), "Please enter Your Email", Toast.LENGTH_LONG ).show();
-                }
                 if ((pass2.equals( "" ))) {
                     Toast.makeText( getApplicationContext(), "Please enter retype password", Toast.LENGTH_LONG ).show();
+                }
+                    String b = "@";
+                    if (!email.contains( b )){
+                        Toast.makeText( getApplicationContext(), "please enter email in correct form!", Toast.LENGTH_LONG ).show();
                 }
 
 
