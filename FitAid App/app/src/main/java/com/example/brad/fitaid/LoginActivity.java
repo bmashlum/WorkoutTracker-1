@@ -104,6 +104,7 @@ public class LoginActivity extends AppCompatActivity {
 
                   Intent intentsignin = new Intent(getApplicationContext(), MainActivity.class);
                   Toast.makeText( getApplicationContext(), "Login successful, redirection to main page", Toast.LENGTH_LONG).show();
+                  
                   startActivity( intentsignin );
               } else{
                   Toast.makeText(getApplicationContext(), "Invalid email or password, please try again", Toast.LENGTH_LONG).show();

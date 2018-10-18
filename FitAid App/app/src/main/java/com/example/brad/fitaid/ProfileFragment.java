@@ -2,6 +2,8 @@ package com.example.brad.fitaid;
 
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
  */
 public class ProfileFragment extends Fragment {
 
+   // private TextInputLayout userWeight
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -22,8 +25,12 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+
+
+
+        return v;
     }
 
 }
