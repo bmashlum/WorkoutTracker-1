@@ -35,5 +35,13 @@ dependencies {
     implementation 'com.sun.mail:android-activation:1.6.2'
     implementation 'com.google.firebase:firebase-database:16.0.3'
     implementation 'com.google.firebase:firebase-core:16.0.4'
+    // implementation 'com.google.firebase:firebase-auth:16.0.1'
+    // implementation 'com.google.firebase:firebase-auth:15.0.0'
+
+    // implementation 'com.google.firebase:firebase-auth:16.0.1'
+    // implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:15.0.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
 }
 apply plugin: 'com.google.gms.google-services'
