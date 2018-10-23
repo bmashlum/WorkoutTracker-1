@@ -1,40 +1,36 @@
 package com.example.brad.fitaid;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.media.RingtoneManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
 
-
+    FirebaseUser user;
     private static final String DEBUGTAG = "JWP";
     private WorkoutFragment fragmentA;
     private JournalFragment fragmentB;
@@ -71,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user==null){
+            startActivity( new Intent( MainActivity.this,SigninActivity2.class ) );
+        }
         setContentView(R.layout.activity_main);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -133,6 +133,13 @@ public class MainActivity extends AppCompatActivity {
 
         imgNavBar = findViewById(R.id.img_TopNav);
 
+
+    }
+
+    public void signout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        finish();
+        startActivity( new Intent( MainActivity.this, SigninActivity2.class ) );
 
     }
 
@@ -228,4 +235,8 @@ public class MainActivity extends AppCompatActivity {
     public void onInputBSent(CharSequence input) {
 
     }*/
+
+
+
+
 }
