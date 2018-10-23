@@ -86,7 +86,6 @@ public class LoginActivity extends AppCompatActivity {
 
        signIn();
 
-
       //  info.setText( "No of attempts remaining: 5" );
     init();
     //init1();

@@ -46,7 +46,7 @@ public class JournalFragment extends Fragment {
     ArrayAdapter<String> arrayAdapter;
     Button btnRetrieve;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("server/workoutsChosen");
+    DatabaseReference ref = database.getReference("/workoutsChosen");
 
     public JournalFragment() {
 

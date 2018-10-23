@@ -27,12 +27,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class WorkoutFragment extends Fragment {
+    DatabaseHelper myDb;
     //private FragmentAListener listener;
     private ArrayList<String> exercisesClicked = new ArrayList<>();
     private ListView lvExercises;
@@ -41,7 +43,7 @@ public class WorkoutFragment extends Fragment {
     private Button addToJournal;
     private String [] exercises,chest,back,abs,legs,biceps,triceps,shoulders;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("server/workoutsChosen");
+    DatabaseReference ref = database.getReference( "/workoutsChosen");
 
     public WorkoutFragment() {
         // Required empty public constructor
@@ -57,7 +59,6 @@ public class WorkoutFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_workout, container, false);
-
 
         exercises = getResources().getStringArray(R.array.exercises);
         chest = getResources().getStringArray(R.array.ex_chest);

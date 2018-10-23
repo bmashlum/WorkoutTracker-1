@@ -21,17 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/content_background" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="403dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:srcCompat="@drawable/content_background" />
-
     <TextView
         android:id="@+id/txtMeasure"
         android:layout_width="wrap_content"
@@ -122,11 +111,11 @@
         android:id="@+id/text_input_armL"
         android:layout_width="73dp"
         android:layout_height="53dp"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_armR"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -141,14 +130,14 @@
         android:id="@+id/text_input_armR"
         android:layout_width="74dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="16dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_waist"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.981">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text_input_armL"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -163,14 +152,11 @@
         android:id="@+id/text_input_waist"
         android:layout_width="62dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="80dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_age"
-        app:layout_constraintVertical_bias="0.875">
+        app:layout_constraintTop_toBottomOf="@+id/text_input_armR">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -185,14 +171,14 @@
         android:id="@+id/text_input_chest"
         android:layout_width="62dp"
         android:layout_height="54dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_armL"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777">
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -207,14 +193,14 @@
         android:id="@+id/text_input_legL"
         android:layout_width="72dp"
         android:layout_height="53dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_legR"
+        app:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_chest"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/text_input_armL">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -229,14 +215,10 @@
         android:id="@+id/text_input_legR"
         android:layout_width="68dp"
         android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="88dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_calfL"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_armL"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_waist">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -251,13 +233,9 @@
         android:id="@+id/text_input_calfL"
         android:layout_width="62dp"
         android:layout_height="54dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_calfR"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_armR"
-        app:layout_constraintVertical_bias="0.117">
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="535dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="81dp"
@@ -272,14 +250,9 @@
         android:id="@+id/text_input_calfR"
         android:layout_width="76dp"
         android:layout_height="54dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:textColorHint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.877"
-        app:layout_constraintStart_toStartOf="parent">
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="535dp">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
