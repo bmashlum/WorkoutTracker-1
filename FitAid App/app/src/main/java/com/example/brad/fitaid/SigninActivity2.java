@@ -22,7 +22,7 @@ public class SigninActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_signin );
+        setContentView( R.layout.activity_sign_in2 );
         mAuth = FirebaseAuth.getInstance();
         email = findViewById( R.id. etEmailSign);
         pw = findViewById( R.id.etPassSign );

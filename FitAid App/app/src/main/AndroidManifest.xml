@@ -18,7 +18,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignInActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SigninActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,8 +35,7 @@
         <receiver android:name=".AlarmReceiver" />
 
         <activity android:name=".CreateAccountActivity" />
-        <activity android:name=".SignInActivity2" />
-        <activity android:name=".SigninActivity2"></activity>
+        
     </application>
 
 </manifest>
