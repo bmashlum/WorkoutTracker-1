@@ -34,6 +34,7 @@ import java.util.Random;
  * A simple {@link Fragment} subclass.
  */
 public class WorkoutFragment extends Fragment {
+
     DatabaseHelper myDb;
     //private FragmentAListener listener;
     private ArrayList<String> exercisesClicked = new ArrayList<>();

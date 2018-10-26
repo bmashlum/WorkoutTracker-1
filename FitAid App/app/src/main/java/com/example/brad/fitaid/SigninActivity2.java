@@ -14,22 +14,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SigninActivity2 extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
+
+    static FirebaseAuth mAuth;
     EditText email, pw;
+    public static String userEmail;
+    private String mail;
+    public static String userId = mAuth.getInstance().getCurrentUser().getEmail();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference ref = database.getReference( "/");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_sign_in2 );
         mAuth = FirebaseAuth.getInstance();
-        email = findViewById( R.id. etEmailSign);
+        email = findViewById( R.id.etEmailSign);
         pw = findViewById( R.id.etPassSign );
     }
 
     public void signinUser(View view) {
-        String mail = email.getText().toString();
+         mail = email.getText().toString();
+
         String password = pw.getText().toString();
         if (mail.length() > 0 && password.length() > 0) {
             mAuth.signInWithEmailAndPassword(mail, password)
@@ -40,6 +50,7 @@ public class SigninActivity2 extends AppCompatActivity {
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d("signin", "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                userEmail = email.getText().toString();
                                 startActivity( new Intent( SigninActivity2.this, MainActivity.class ) );
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -61,6 +72,7 @@ public class SigninActivity2 extends AppCompatActivity {
     public void gotoCreate(View view) {
         startActivity( new Intent (SigninActivity2.this, CreateAccountActivity.class));
     }
+
 }
 
 
