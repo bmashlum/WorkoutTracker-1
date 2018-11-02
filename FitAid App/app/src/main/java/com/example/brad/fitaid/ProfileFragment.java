@@ -2,18 +2,16 @@ package com.example.brad.fitaid;
 
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.textfield.TextInputEditText;
+
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,20 +24,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Locale;
-import java.util.Set;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
-    //private String currentUser = SigninActivity2.userId;
+    //private String currentUser = SigninActivity.userId;
 
     HashMap<String,Double> statMap;
-    final String email = SigninActivity2.userId.replaceAll("\\.", "");
+    final String email = SigninActivity.userId.replaceAll("\\.", "");
     final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
     private ArrayList<Double> inputText = new ArrayList<>();
     FirebaseDatabase database = FirebaseDatabase.getInstance();

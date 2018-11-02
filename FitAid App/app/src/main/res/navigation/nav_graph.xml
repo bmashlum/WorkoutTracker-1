@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navProfile">
+
+    <fragment
+        android:id="@+id/navProfile"
+        android:name="com.example.brad.fitaid.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile"></fragment>
+    <fragment
+        android:id="@+id/navJournal"
+        android:name="com.example.brad.fitaid.JournalFragment"
+        android:label="fragment_journal"
+        tools:layout="@layout/fragment_journal" >
+        <argument
+            android:name="exercisesClicked"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navWorkouts"
+        android:name="com.example.brad.fitaid.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" >
+        <action
+            android:id="@+id/action_navWorkouts_to_navJournal"
+            app:destination="@id/navJournal" />
+    </fragment>
+</navigation>
