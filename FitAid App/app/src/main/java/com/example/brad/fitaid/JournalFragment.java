@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -71,18 +72,20 @@ public class JournalFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_journal, container, false);
 
-        btnRetrieve = v.findViewById(R.id.btn_Retrieve);
-
         lvJournalEntries = v.findViewById(R.id.lvJournalEntries);
 
-        arrayAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, exercisesRetrieved);
+        arrayAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view_journal, exercisesRetrieved);
 
         lvJournalEntries.setAdapter(arrayAdapter);
-        btnRetrieve.setOnClickListener(new View.OnClickListener() {
+
+        lvJournalEntries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String pos = parent.getItemAtPosition(position).toString();
 
-
+                if (lvJournalEntries.isItemChecked(position)) {
+                    System.out.println("JOURNAL LIST POSITION" + pos);
+                }
             }
         });
 
@@ -115,8 +118,9 @@ public class JournalFragment extends Fragment {
                 tvDisplayDate.setText(date);
             }
         };
+
         if (getArguments() == null || getArguments().get("exercisesClicked") == null) {
-            Toast.makeText(getContext(), "No entries added today yet!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "No entries added for today yet!", Toast.LENGTH_SHORT).show();
 
         } else {
             JournalFragmentArgs args = JournalFragmentArgs.fromBundle(getArguments());
