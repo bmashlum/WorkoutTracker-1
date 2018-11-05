@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "968193091639",
+    "firebase_url": "https://fitaid-a0528.firebaseio.com",
+    "project_id": "fitaid-a0528",
+    "storage_bucket": "fitaid-a0528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968193091639:android:0b85b45ad424e543",
+        "android_client_info": {
+          "package_name": "com.example.brad.fitaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968193091639-8i9bj7k8cb70snc74uqcuj436vhjoagj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUQLyxzfpqwz_O9JusFGUE_spiceRrljQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

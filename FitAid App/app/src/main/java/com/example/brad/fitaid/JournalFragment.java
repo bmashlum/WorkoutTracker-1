@@ -83,9 +83,7 @@ public class JournalFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String pos = parent.getItemAtPosition(position).toString();
 
-                if (lvJournalEntries.isItemChecked(position)) {
-                    System.out.println("JOURNAL LIST POSITION" + pos);
-                }
+                System.out.println("Item selected: "+pos);
             }
         });
 
