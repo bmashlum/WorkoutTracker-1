@@ -33,6 +33,7 @@ MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\a11da57038676b6b70030ca564d17e2f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\9be007ce39d578796089d6f35ad0ac74\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\faad6456aba591b1ab3c275a68f87deb\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:17:1-25:12
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:17:1-22:12
@@ -56,6 +57,8 @@ MERGED from [androidx.core:core:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\8c9e7ebd5e474130a0210d2796a886f9\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\5de3b8d73895ca9c48b2edc25ba07d32\AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\71c00b6d9750601b9720b7068b798c10\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.0.0-alpha1.aar\a02e4bfdbfc6f35f72b646e01a394b71\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\f1fb6a69a9aaf23d19a06b9a2ae37366\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\06e788d0bb2fb216109ee365e436a059\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\a833d2d7ee07ba89d4dba531e91b66cc\AndroidManifest.xml:17:1-22:12
@@ -153,10 +156,14 @@ MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\User
 MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-play-services-ads-identifier-16.0.0.aar\70b582c871342fedd16eebe96c90f2e1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\d51ae1f370727e95ee34cf28666df3ce\AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\d51ae1f370727e95ee34cf28666df3ce\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.core:core:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\4e0cbfaf99712bdd429e9fdb38bc3251\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\4e0cbfaf99712bdd429e9fdb38bc3251\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\5de3b8d73895ca9c48b2edc25ba07d32\AndroidManifest.xml:22:5-23:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\5de3b8d73895ca9c48b2edc25ba07d32\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:22:5-28:19
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\f0cd47529bbd2879f9f64bb357fc9568\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\f0cd47529bbd2879f9f64bb357fc9568\AndroidManifest.xml:7:5-20
 	android:appComponentFactory
@@ -279,6 +286,8 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Bra
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\9be007ce39d578796089d6f35ad0ac74\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\faad6456aba591b1ab3c275a68f87deb\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\faad6456aba591b1ab3c275a68f87deb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:20:5-44
@@ -325,6 +334,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Br
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\5de3b8d73895ca9c48b2edc25ba07d32\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\71c00b6d9750601b9720b7068b798c10\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\71c00b6d9750601b9720b7068b798c10\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.0.0-alpha1.aar\a02e4bfdbfc6f35f72b646e01a394b71\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.0.0-alpha1.aar\a02e4bfdbfc6f35f72b646e01a394b71\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\f1fb6a69a9aaf23d19a06b9a2ae37366\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\f1fb6a69a9aaf23d19a06b9a2ae37366\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\06e788d0bb2fb216109ee365e436a059\AndroidManifest.xml:20:5-44
@@ -515,3 +528,13 @@ ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad\
 		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\d51ae1f370727e95ee34cf28666df3ce\AndroidManifest.xml:25:13-66
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-play-services-basement-16.0.1.aar\d51ae1f370727e95ee34cf28666df3ce\AndroidManifest.xml:24:13-58
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.0.0-alpha1.aar\2c96de33e40f7d8f3faa8e0dcf7d0f29\AndroidManifest.xml:24:13-79

@@ -35,6 +35,7 @@ public class SigninActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         email = findViewById( R.id.etEmailSign);
         pw = findViewById( R.id.etPassSign );
+
     }
 
     public void signinUser(View view) {
@@ -52,6 +53,8 @@ public class SigninActivity extends AppCompatActivity {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 userEmail = email.getText().toString();
                                 startActivity( new Intent( SigninActivity.this, MainActivity.class ) );
+                                System.out.println("TEST MAIL" + mail);
+
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("signin", "signInWithEmail:failure", task.getException());

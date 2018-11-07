@@ -6,9 +6,10 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,24 +20,15 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Locale;
-import java.util.Set;
-import java.util.StringTokenizer;
 
 
 /**
@@ -44,7 +36,8 @@ import java.util.StringTokenizer;
  */
 public class JournalFragment extends Fragment {
 
-    //private FragmentBListener listener;
+    static String pos;
+    static String exercises;
     private ListView lvJournalEntries;
     private TextView tvDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
@@ -53,17 +46,12 @@ public class JournalFragment extends Fragment {
     Button btnRetrieve;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("/workoutsChosen");
+    private JournalViewModel viewModel;
 
     public JournalFragment() {
 
     }
 
-
-    /**
-     * public interface FragmentBListener {
-     * void onInputBSent(CharSequence input);
-     * }
-     */
 
     @Nullable
     @Override
@@ -81,9 +69,9 @@ public class JournalFragment extends Fragment {
         lvJournalEntries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String pos = parent.getItemAtPosition(position).toString();
-
-                System.out.println("Item selected: "+pos);
+                pos = parent.getItemAtPosition(position).toString();
+                System.out.println("Item selected: " + pos);
+                openDialog();
             }
         });
 
@@ -117,101 +105,86 @@ public class JournalFragment extends Fragment {
             }
         };
 
-        if (getArguments() == null || getArguments().get("exercisesClicked") == null) {
+
+        //DATA TRANSFER FROM WORKOUT FRAGMENT SAFE ARGS
+
+        /*if (getArguments() == null || getArguments().get("exercisesClicked") == null) {
             Toast.makeText(getContext(), "No entries added for today yet!", Toast.LENGTH_SHORT).show();
 
         } else {
             JournalFragmentArgs args = JournalFragmentArgs.fromBundle(getArguments());
-            String exercises = args.getExercisesClicked();
+            exercises = args.getExercisesClicked();
 
             ArrayList<String> myList = new ArrayList(Arrays.asList(exercises.substring(1, exercises.length() - 1).replaceAll("\\s", "").split(",")));
-            System.out.println("TEST***" + myList);
             arrayAdapter.addAll(myList);
             arrayAdapter.notifyDataSetChanged();
-        }
+        }*/
+
+        //RETRIEVE FROM FIREBASE
+/**
+ ref.addChildEventListener(new ChildEventListener() {
+@Override public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+String key = dataSnapshot.getKey();
+exercisesRetrieved.add(key);
+
+Set<String> listWithoutDuplicates = new LinkedHashSet<>(exercisesRetrieved);
+exercisesRetrieved.clear();
+
+exercisesRetrieved.addAll(listWithoutDuplicates);
+arrayAdapter.notifyDataSetChanged();
+Set<String> set = new HashSet<>(exercisesRetrieved);
+exercisesRetrieved.clear();
+exercisesRetrieved.addAll(set);
+arrayAdapter.addAll(exercisesRetrieved);
+arrayAdapter.notifyDataSetChanged();
+dataSnapshot.getRef().removeValue();
+
+System.out.println("SET LIST" + set );
+}
+
+@Override public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+}
+
+@Override public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+}
+
+@Override public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+}
+
+@Override public void onCancelled(@NonNull DatabaseError databaseError) {
 
 
+}
+});
 
-        /** ref.addChildEventListener(new ChildEventListener() {
-             @Override
-             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-                 String key = dataSnapshot.getKey();
-                 exercisesRetrieved.add(key);
-
-                 Set<String> listWithoutDuplicates = new LinkedHashSet<>(exercisesRetrieved);
-                 exercisesRetrieved.clear();
-
-                 exercisesRetrieved.addAll(listWithoutDuplicates);
-                 arrayAdapter.notifyDataSetChanged();
-                 /**Set<String> set = new HashSet<>(exercisesRetrieved);
-                  exercisesRetrieved.clear();
-                  exercisesRetrieved.addAll(set);
-                  arrayAdapter.addAll(exercisesRetrieved);
-                  arrayAdapter.notifyDataSetChanged();
-                  dataSnapshot.getRef().removeValue();
-
-                  System.out.println("SET LIST" + set );
-             }
-
-             @Override
-             public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-             }
-
-             @Override
-             public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-             }
-
-             @Override
-             public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-             }
-
-             @Override
-             public void onCancelled(@NonNull DatabaseError databaseError) {
-
-
-             }
-         });*/
-
-
+ */
         return v;
     }
 
+    // ViewModel LiveData Observer Implementation for exercises in lists
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        System.out.println("ONACTIVITY CREATED");
 
+        viewModel = ViewModelProviders.of(getActivity()).get(JournalViewModel.class);
+        viewModel.getExercises().observe(getViewLifecycleOwner(), new Observer<ArrayList<String>>() {
+            @Override
+            public void onChanged(ArrayList<String> strings) {
+                System.out.println("ONCHANGE CREATED");
 
-    /**public void updateEditText(ArrayList<String> newList) {
-     //editText.setText(newText);
-     System.out.println("**GET NewList " + newList);
-     System.out.println("JOURNAL LISTENER IS : " + listener);
-     adapter = new ArrayAdapter((Context)listener, R.layout.list_view, newList);
-     lvJournalEntries.setAdapter(adapter);
-     adapter.notifyDataSetChanged();
-     }*/
+                exercisesRetrieved.addAll(strings);
+            }
+        });
 
-    /**@Override public void onAttach(Context context) {
-    super.onAttach(context);
-    System.out.println("**ATTACH CALL ");
-    if (context instanceof FragmentBListener) {
-    listener = (FragmentBListener) context;
-    } else {
-    throw new RuntimeException(context.toString()
-    + " must implement FragmentBListener");
-    }
     }
 
-     @Override public void onDetach() {
-     super.onDetach();
-     System.out.println("ONDETACH JOURNAL");
-     //listener = null;
-     }*/
-
-    /**protected void displayReceivedData(ArrayList<String> input)
-     {
-     adapter = new ArrayAdapter<>(getContext().getApplicationContext(), R.layout.list_view, input);
-     lvJournalEntries.setAdapter(adapter);
-     adapter.notifyDataSetChanged();
-     }*/
+    public void openDialog() {
+        SetsRepsWeightDialog dialog = new SetsRepsWeightDialog();
+        dialog.show(getChildFragmentManager(), "setsrepsweights dialog");
+    }
 }

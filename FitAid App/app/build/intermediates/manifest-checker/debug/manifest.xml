@@ -129,6 +129,11 @@
             android:value="@integer/google_play_services_version" />
 
         <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.brad.fitaid.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.example.brad.fitaid.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />

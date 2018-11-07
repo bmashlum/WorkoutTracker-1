@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -37,7 +39,7 @@ import java.util.Locale;
 public class WorkoutFragment extends Fragment {
 
     DatabaseHelper myDb;
-    //private FragmentAListener listener;
+    private JournalViewModel viewModel = new JournalViewModel();
     private ArrayList<String> exercisesClicked = new ArrayList<>();
     private ListView lvExercises;
     private Spinner spinWorkout;
@@ -50,12 +52,6 @@ public class WorkoutFragment extends Fragment {
     public WorkoutFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * public interface FragmentAListener {
-     * void onInputASent(ArrayList<String> input);
-     * }
-     */
 
     @Nullable
     @Override
@@ -86,24 +82,35 @@ public class WorkoutFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                    WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal action =
-                            WorkoutFragmentDirections.actionNavWorkoutsToNavJournal(exercisesClicked.toString());
-                    action.setExercisesClicked(exercisesClicked.toString());
-                    Navigation.findNavController(v).navigate(action);
+                viewModel.setExercises(exercisesClicked);
+                System.out.println("TESTING VIEW" + exercisesClicked + " VIEW MODEL " + viewModel);
 
+                //Navigate to Journal Frag when button is clicked
+                WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal actionNavWorkoutsToNavJournal =
+                        WorkoutFragmentDirections.actionNavWorkoutsToNavJournal();
+                Navigation.findNavController(v).navigate(actionNavWorkoutsToNavJournal);
 
-                HashMap<String, String> exerciseMap = new HashMap<String, String>();
-                for (String exercise : exercisesClicked) {
-                    exerciseMap.put(exercise, date_n);
-                }
-                ref.setValue(exerciseMap);
+                //USING NAV ACTION SAFE ARGS TO TRANSFER DATA TO JOURNAL
+                /*
+                 WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal action =
+                 WorkoutFragmentDirections.actionNavWorkoutsToNavJournal(exercisesClicked.toString());
+                 action.setExercisesClicked(exercisesClicked.toString());
+                 Navigation.findNavController(v).navigate(action);
+                */
 
-                System.out.println(exerciseMap.toString());
+                //PUSH WORKOUTS TO FIREBASE
+                /**
+                 HashMap<String, String> exerciseMap = new HashMap<String, String>();
+                 for (String exercise : exercisesClicked) {
+                 exerciseMap.put(exercise, date_n);
+                 }
+                 ref.setValue(exerciseMap);
+
+                 System.out.println(exerciseMap.toString());
+                 */
 
                 Toast.makeText(getContext(), "You are adding " + exercisesClicked.toString() + " to your journal", Toast.LENGTH_SHORT).show();
 
-                //System.out.println("****listenerWorkout:" + listener);
-                //listener.onInputASent(exercisesClicked);
             }
         });
 
@@ -189,6 +196,23 @@ public class WorkoutFragment extends Fragment {
 
         // Inflate the layout for this fragment
         return v;
+
+    }
+
+    // ViewModel LiveData Observer Implementation for exercises in lists
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        System.out.println("ONACTIVITY CREATED");
+
+        viewModel = ViewModelProviders.of(getActivity()).get(JournalViewModel.class);
+        viewModel.getExercises().observe(getViewLifecycleOwner(), new Observer<ArrayList<String>>() {
+            @Override
+            public void onChanged(ArrayList<String> strings) {
+                System.out.println("ONCHANGE CREATED");
+                //exercisesClicked.addAll(strings);
+            }
+        });
 
     }
 }

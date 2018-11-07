@@ -761,6 +761,7 @@ color design_fab_stroke_top_inner_color
 color design_fab_stroke_top_outer_color
 color design_snackbar_background_color
 color design_tint_password_toggle
+color dialog
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -1404,6 +1405,8 @@ id inputChest
 id inputFat
 id inputLegL
 id inputLegR
+id inputReps
+id inputSets
 id inputWaist
 id inputWeight
 id invisible
@@ -1536,6 +1539,8 @@ id text_input_chest
 id text_input_legL
 id text_input_legR
 id text_input_password_toggle
+id text_input_reps
+id text_input_sets
 id text_input_waist
 id text_input_weight
 id textinput_counter
@@ -1559,6 +1564,9 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
+id tvReps
+id tvSets
+id tvWeight
 id txtMeasure
 id uniform
 id unlabeled
@@ -1641,6 +1649,7 @@ layout design_text_input_password_icon
 layout fragment_journal
 layout fragment_profile
 layout fragment_workout
+layout layout_dialog
 layout list_view
 layout list_view_journal
 layout mtrl_layout_snackbar
@@ -1960,6 +1969,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style MyDialogTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
