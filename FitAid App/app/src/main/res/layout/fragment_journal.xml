@@ -46,9 +46,9 @@
 
     <ListView
         android:id="@+id/lvJournalEntries"
-        android:layout_width="197dp"
+        android:layout_width="187dp"
         android:layout_height="410dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="64dp"
         android:choiceMode="multipleChoice"
         android:clickable="true"
         android:divider="@color/transpAccent"
@@ -57,19 +57,21 @@
         android:listSelector="@drawable/listselector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvSets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginEnd="93dp"
         android:layout_marginBottom="14dp"
         android:text="Sets"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/lvJournalEntries" />
+        app:layout_constraintEnd_toStartOf="@+id/tvWeight"
+        app:layout_constraintStart_toStartOf="@+id/tvDate" />
 
     <TextView
         android:id="@+id/tvReps"
@@ -92,5 +94,61 @@
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="191dp"
+        android:layout_height="428dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvSet1"
+                android:text="Set 1"
+                android:textColor="@color/transpAccent" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvSet2"
+                android:text="Set 2"
+                android:textColor="@color/transpAccent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvSet3"
+                android:text="Set 3"
+                android:textColor="@color/transpAccent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tvSet4"
+                android:text="Set 4"
+                android:textColor="@color/transpAccent" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

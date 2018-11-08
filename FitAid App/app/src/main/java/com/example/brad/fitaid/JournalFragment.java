@@ -1,6 +1,7 @@
 package com.example.brad.fitaid;
 
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -71,9 +72,20 @@ public class JournalFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 pos = parent.getItemAtPosition(position).toString();
                 System.out.println("Item selected: " + pos);
-                openDialog();
+
             }
         });
+
+        lvJournalEntries.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                pos = adapterView.getItemAtPosition(i).toString();
+                System.out.println("Item selected: " + pos);
+                openDialog();
+                return true;
+            }
+        });
+
 
         tvDisplayDate = v.findViewById(R.id.tvDate);
         String date_n = new SimpleDateFormat("M/dd/yyyy", Locale.getDefault()).format(new Date());
