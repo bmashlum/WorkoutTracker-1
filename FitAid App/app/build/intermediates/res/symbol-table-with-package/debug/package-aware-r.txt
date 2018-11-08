@@ -1234,7 +1234,10 @@ drawable ic_notifications_black_24dp
 drawable item_background
 drawable legs
 drawable listselector
+drawable loggoluncher
+drawable logoapp_background
 drawable main_logo_text
+drawable main_logo_text_copy
 drawable main_page_statusbar
 drawable main_page_top
 drawable main_toolbar
@@ -1673,6 +1676,8 @@ layout video
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap main_logo_text_copy
+mipmap main_page_top
 navigation nav_graph
 raw trainwhistle
 raw trainwreck

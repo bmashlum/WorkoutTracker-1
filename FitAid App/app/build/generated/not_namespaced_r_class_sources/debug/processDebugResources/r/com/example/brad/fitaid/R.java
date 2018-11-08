@@ -5960,32 +5960,35 @@ public final class R {
     public static final int item_background=0x7f080091;
     public static final int legs=0x7f080092;
     public static final int listselector=0x7f080093;
-    public static final int main_logo_text=0x7f080094;
-    public static final int main_page_statusbar=0x7f080095;
-    public static final int main_page_top=0x7f080096;
-    public static final int main_toolbar=0x7f080097;
-    public static final int mtrl_snackbar_background=0x7f080098;
-    public static final int mtrl_tabs_default_indicator=0x7f080099;
-    public static final int navigation_empty_icon=0x7f08009a;
-    public static final int notification_action_background=0x7f08009b;
-    public static final int notification_background=0x7f08009c;
-    public static final int notification_bg=0x7f08009d;
-    public static final int notification_bg_low=0x7f08009e;
-    public static final int notification_bg_low_normal=0x7f08009f;
-    public static final int notification_bg_low_pressed=0x7f0800a0;
-    public static final int notification_bg_normal=0x7f0800a1;
-    public static final int notification_bg_normal_pressed=0x7f0800a2;
-    public static final int notification_icon_background=0x7f0800a3;
-    public static final int notification_template_icon_bg=0x7f0800a4;
-    public static final int notification_template_icon_low_bg=0x7f0800a5;
-    public static final int notification_tile_bg=0x7f0800a6;
-    public static final int notify_panel_notification_icon_bg=0x7f0800a7;
-    public static final int rounded_white=0x7f0800a8;
-    public static final int sharp_accessibility_black_18dp=0x7f0800a9;
-    public static final int sharp_book_black_18dp=0x7f0800aa;
-    public static final int sharp_fitness_center_black_18dp=0x7f0800ab;
-    public static final int tooltip_frame_dark=0x7f0800ac;
-    public static final int tooltip_frame_light=0x7f0800ad;
+    public static final int loggoluncher=0x7f080094;
+    public static final int logoapp_background=0x7f080095;
+    public static final int main_logo_text=0x7f080096;
+    public static final int main_logo_text_copy=0x7f080097;
+    public static final int main_page_statusbar=0x7f080098;
+    public static final int main_page_top=0x7f080099;
+    public static final int main_toolbar=0x7f08009a;
+    public static final int mtrl_snackbar_background=0x7f08009b;
+    public static final int mtrl_tabs_default_indicator=0x7f08009c;
+    public static final int navigation_empty_icon=0x7f08009d;
+    public static final int notification_action_background=0x7f08009e;
+    public static final int notification_background=0x7f08009f;
+    public static final int notification_bg=0x7f0800a0;
+    public static final int notification_bg_low=0x7f0800a1;
+    public static final int notification_bg_low_normal=0x7f0800a2;
+    public static final int notification_bg_low_pressed=0x7f0800a3;
+    public static final int notification_bg_normal=0x7f0800a4;
+    public static final int notification_bg_normal_pressed=0x7f0800a5;
+    public static final int notification_icon_background=0x7f0800a6;
+    public static final int notification_template_icon_bg=0x7f0800a7;
+    public static final int notification_template_icon_low_bg=0x7f0800a8;
+    public static final int notification_tile_bg=0x7f0800a9;
+    public static final int notify_panel_notification_icon_bg=0x7f0800aa;
+    public static final int rounded_white=0x7f0800ab;
+    public static final int sharp_accessibility_black_18dp=0x7f0800ac;
+    public static final int sharp_book_black_18dp=0x7f0800ad;
+    public static final int sharp_fitness_center_black_18dp=0x7f0800ae;
+    public static final int tooltip_frame_dark=0x7f0800af;
+    public static final int tooltip_frame_light=0x7f0800b0;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
@@ -6411,6 +6414,8 @@ public final class R {
   public static final class mipmap {
     public static final int ic_launcher=0x7f0e0000;
     public static final int ic_launcher_round=0x7f0e0001;
+    public static final int main_logo_text_copy=0x7f0e0002;
+    public static final int main_page_top=0x7f0e0003;
   }
   public static final class navigation {
     public static final int nav_graph=0x7f0f0000;
