@@ -1316,6 +1316,7 @@ id bounce
 id btnCreate
 id btn_AddToJournal
 id btn_Save
+id btn_reset_pass
 id btn_signin
 id btn_x
 id buttonPanel
@@ -1365,6 +1366,7 @@ id etEmail
 id etEmailSign
 id etPass
 id etPassSign
+id et_email_reset_pass
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1389,6 +1391,7 @@ id ifRoom
 id image
 id imageView
 id imageView10
+id imageView11
 id imageView2
 id imageView3
 id imageView4
@@ -1564,6 +1567,7 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
+id tv_forgot_pass
 id txtMeasure
 id uniform
 id unlabeled

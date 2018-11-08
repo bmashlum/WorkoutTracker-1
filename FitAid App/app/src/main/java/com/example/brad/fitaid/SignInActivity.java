@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,7 +28,7 @@ public class SignInActivity extends AppCompatActivity {
     public static String userId= "";
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference( "/");
-
+    private TextView forgot_pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -35,6 +36,9 @@ public class SignInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         email = findViewById( R.id.etEmailSign);
         ab = findViewById( R.id.etPassSign );
+        forgot_pass = (TextView) findViewById(R.id.tv_forgot_pass);
+
+
     }
 
     public void signinUser(View view) {
@@ -71,6 +75,9 @@ public class SignInActivity extends AppCompatActivity {
 
     public void gotoCreate(View view) {
         startActivity( new Intent (SignInActivity.this, CreateAccountActivity.class));
+    }
+    public void goToReset(View view){
+        startActivity( new Intent (SignInActivity.this, ForgotPasswordActivity.class));
     }
 
 }
