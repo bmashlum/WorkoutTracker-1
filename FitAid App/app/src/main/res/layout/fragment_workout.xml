@@ -25,10 +25,11 @@
         android:id="@+id/imageView7"
         android:layout_width="106dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/main_logo_text"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="15dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
         android:id="@+id/sp_workout"
@@ -90,6 +91,8 @@
         app:layout_constraintTop_toBottomOf="@+id/img_ticker"
         app:layout_constraintVertical_bias="0.442" />
 
+
+
     <Button
         android:id="@+id/btn_AddToJournal"
         android:layout_width="wrap_content"
@@ -102,5 +105,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/sp_workout"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

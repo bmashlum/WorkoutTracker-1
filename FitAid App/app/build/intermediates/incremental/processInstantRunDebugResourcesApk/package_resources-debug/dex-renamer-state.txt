@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 #Thu Nov 08 14:51:03 EST 2018
+=======
+#Thu Nov 08 11:18:00 EST 2018
+>>>>>>> origin/resetPassword

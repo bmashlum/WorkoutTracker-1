@@ -1,28 +1,43 @@
 package com.example.brad.fitaid;
 
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.MediaController;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.sql.SQLOutput;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +46,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
+
+import static android.widget.AdapterView.*;
 
 
 /**
@@ -41,6 +59,7 @@ public class WorkoutFragment extends Fragment {
     DatabaseHelper myDb;
     private JournalViewModel viewModel = new JournalViewModel();
     private ArrayList<String> exercisesClicked = new ArrayList<>();
+    //private ArrayList<String> exercisesClickedLong = new ArrayList<>();
     private ListView lvExercises;
     private Spinner spinWorkout;
     private ImageView imgTicker;
@@ -48,17 +67,21 @@ public class WorkoutFragment extends Fragment {
     private String[] exercises, chest, back, abs, legs, biceps, triceps, shoulders;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("/workoutsChosen");
-
+private VideoView videoView;
+    PopupWindow popUp;
+    ConstraintLayout lapop;
+    ConstraintLayout.LayoutParams parms;
+    ConstraintLayout p;
     public WorkoutFragment() {
         // Required empty public constructor
     }
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_workout, container, false);
+        final View v = inflater.inflate(R.layout.fragment_workout, container, false);
 
         exercises = getResources().getStringArray(R.array.exercises);
         chest = getResources().getStringArray(R.array.ex_chest);
@@ -69,10 +92,48 @@ public class WorkoutFragment extends Fragment {
         triceps = getResources().getStringArray(R.array.ex_triceps);
         shoulders = getResources().getStringArray(R.array.ex_shoulders);
 
-
+        videoView = v.findViewById(R.id.videoView);
         lvExercises = v.findViewById(R.id.lvExercises);
         lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+//hash map for videos by exercises
+        final HashMap<String, Uri> uri = new HashMap<>();
+        uri.put("Squat", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Leg Extension", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwhistle"));
+        uri.put("Leg Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Lying Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Shoulder Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Rear Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Tricep Pushdown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Rope Pushdown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Bent-over Tricep Kickback", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Standing Dumbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Standing Barbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Dumbbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Bicep Face Pull", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pullup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Lat Pulldown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Barbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Inverse Pulldown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Barbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Barbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Dumbbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Chest Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pushup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Reverse Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Russian Twist", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Hanging Leg Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
 
+       final VideoView vv = v.findViewById(R.id.videoView);
+//final MediaController mediaController = new MediaController(getContext());
         final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
 
         imgTicker = v.findViewById(R.id.img_ticker);
@@ -122,14 +183,17 @@ public class WorkoutFragment extends Fragment {
         ArrayAdapter adaptSpinWorkout = new ArrayAdapter(getContext(), R.layout.spinner_item, workoutList);
         adaptSpinWorkout.setDropDownViewResource(R.layout.spinner_item_dropdown);
         spinWorkout.setAdapter(adaptSpinWorkout);
-        spinWorkout.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinWorkout.setOnItemSelectedListener(new OnItemSelectedListener() {
+
 
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 final String pos = parentView.getItemAtPosition(position).toString();
                 final ArrayAdapter<String> adapter;
+               // final ArrayAdapter<String> nAdapter = adapter;
 
-                lvExercises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                lvExercises.setOnItemClickListener(new OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         String pos = parent.getItemAtPosition(position).toString();
@@ -144,8 +208,59 @@ public class WorkoutFragment extends Fragment {
                             exercisesClicked.remove(pos);
                             System.out.println("EXERCISES CLICKED: " + exercisesClicked);
                         }
+
                     }
                 });
+//long press for popUp video
+                lvExercises.setOnItemLongClickListener(new OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                        String pos = parent.getItemAtPosition(position).toString();
+                        if (lvExercises.isLongClickable()) {
+                            Toast.makeText(getContext(), "You have selected " + pos, Toast.LENGTH_SHORT).show();
+                            System.out.println("EXERCISES CLICKED long: " + pos);
+                        }
+
+                        Set<String> keys = uri.keySet();
+                        for ( String key : keys ) {
+                            //System.out.println( key );
+
+                            if (pos.equals(key)){
+                                final PopupWindow pw = new PopupWindow(getActivity());
+                                final  VideoView vv = new VideoView(getActivity());
+                                LayoutParams linearparams1 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+                                vv.setLayoutParams(linearparams1);
+                                final MediaController mediaController = new MediaController(getActivity());
+                                mediaController.setAnchorView(vv);
+                                vv.setMediaController(mediaController);
+                                Uri myUri = uri.get(key);
+                                vv.setVideoURI(myUri);
+                                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                                             @Override
+                                                             public void onPrepared(MediaPlayer mp) {
+                                                                 vv.requestFocus();
+                                                                 vv.start();
+                                                             }
+                                                         }
+                                );
+                                pw.setContentView(vv);
+                                pw.setWidth(700);
+                                pw.setHeight(800);
+                                pw.setTouchable(true);
+                                pw.setFocusable(true);
+                                pw.setOutsideTouchable(true);
+                                pw.showAtLocation(lvExercises, Gravity.BOTTOM, 40, 500);
+                                pw.update();
+                                System.out.println(key + " , " + uri.get(key));
+                            }
+                        }
+
+
+                        return false;
+                    }
+                });
+
+
 
                 if (pos.compareToIgnoreCase("Chest") == 0) {
                     imgTicker.setImageResource(R.drawable.chest);
@@ -186,6 +301,10 @@ public class WorkoutFragment extends Fragment {
                     adapter.notifyDataSetChanged();
                 }
             }
+
+
+
+
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {

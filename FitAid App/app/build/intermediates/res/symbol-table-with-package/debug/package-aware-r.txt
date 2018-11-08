@@ -1236,7 +1236,10 @@ drawable ic_notifications_black_24dp
 drawable item_background
 drawable legs
 drawable listselector
+drawable loggoluncher
+drawable logoapp_background
 drawable main_logo_text
+drawable main_logo_text_copy
 drawable main_page_statusbar
 drawable main_page_top
 drawable main_toolbar
@@ -1315,7 +1318,9 @@ id bounce
 id btnCreate
 id btn_AddToJournal
 id btn_Save
+id btn_reset_pass
 id btn_signin
+id btn_x
 id buttonPanel
 id cancel_action
 id center
@@ -1363,6 +1368,7 @@ id etEmail
 id etEmailSign
 id etPass
 id etPassSign
+id et_email_reset_pass
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1387,6 +1393,7 @@ id ifRoom
 id image
 id imageView
 id imageView10
+id imageView11
 id imageView2
 id imageView3
 id imageView4
@@ -1423,6 +1430,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id lvExercises
@@ -1566,6 +1574,7 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
+<<<<<<< HEAD
 id tvReps
 id tvSet1
 id tvSet2
@@ -1573,11 +1582,15 @@ id tvSet3
 id tvSet4
 id tvSets
 id tvWeight
+=======
+id tv_forgot_pass
+>>>>>>> origin/resetPassword
 id txtMeasure
 id uniform
 id unlabeled
 id up
 id useLogo
+id videoView
 id view_offset_helper
 id visible
 id wide
@@ -1681,10 +1694,15 @@ layout select_dialog_singlechoice_material
 layout spinner_item
 layout spinner_item_dropdown
 layout support_simple_spinner_dropdown_item
+layout video
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap main_logo_text_copy
+mipmap main_page_top
 navigation nav_graph
+raw trainwhistle
+raw trainwreck
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
