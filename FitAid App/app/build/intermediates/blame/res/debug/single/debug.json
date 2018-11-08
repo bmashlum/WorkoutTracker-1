@@ -12,12 +12,12 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2d58b9c9ee35686f72058d04adc24339/res/drawable-xxhdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_design_ic_visibility_off.png.flat",
@@ -56,16 +56,16 @@
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/drawable/back.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/interpolator_mtrl_linear.xml.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/interpolator/mtrl_linear.xml"
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/2d58b9c9ee35686f72058d04adc24339/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_36dp.png"
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/interpolator_mtrl_linear.xml.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/interpolator/mtrl_linear.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/layout_select_dialog_multichoice_material.xml.flat",
@@ -320,12 +320,12 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-v24_main_logo_text_copy.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/drawable-v24/main_logo_text_copy.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_black_16dp.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xhdpi-v4/abc_ic_star_black_16dp.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/layout_spinner_item.xml.flat",
@@ -400,12 +400,12 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/jetified-navigation-ui-1.0.0-alpha06.aar/9cf6c5058c794f759cbe8d190416dd6c/res/anim/nav_default_pop_exit_anim.xml"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-hdpi_main_page_top.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-hdpi/main_page_top.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_focused_holo.9.png.flat",
@@ -796,12 +796,12 @@
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/navigation/nav_graph.xml"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1364,12 +1364,12 @@
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-v24_loggoluncher.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/drawable-v24/loggoluncher.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/layout-v26_abc_screen_toolbar.xml.flat",
@@ -1616,16 +1616,16 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/b8299071bf9a5a5b84938d629d18b1b6/res/layout/notification_template_lines_media.xml"
     },
     {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/color_mtrl_tabs_icon_color_selector_colored.xml.flat",
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/color/mtrl_tabs_icon_color_selector_colored.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/anim_abc_tooltip_exit.xml.flat",
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/anim/abc_tooltip_exit.xml"
-    },
-    {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
@@ -1940,12 +1940,12 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/color_mtrl_tabs_ripple_color.xml.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/color/mtrl_tabs_ripple_color.xml"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-v21_abc_action_bar_item_background_material.xml.flat",
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/color_mtrl_tabs_ripple_color.xml.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/color/mtrl_tabs_ripple_color.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable_ic_dropdown.png.flat",
@@ -2088,12 +2088,12 @@
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/anim_abc_tooltip_enter.xml.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/anim/abc_tooltip_enter.xml"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/anim_abc_tooltip_enter.xml.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/anim/abc_tooltip_enter.xml"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/color_mtrl_chip_close_icon_tint.xml.flat",
@@ -2296,12 +2296,12 @@
         "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_main_page_top.png.flat",
         "source": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/src/main/res/mipmap-xxhdpi/main_page_top.png"
+    },
+    {
+        "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_title_material.xml.flat",
