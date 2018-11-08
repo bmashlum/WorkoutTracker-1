@@ -5,7 +5,6 @@ import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -16,25 +15,19 @@ import androidx.navigation.Navigation
 
 import android.view.Menu
 import android.view.View
-import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.NavigationUI.setupWithNavController
-import com.example.brad.fitaid.R.id.navigationBottom
 
-import com.google.android.material.bottomnavigation.BottomNavigationMenu
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 
 import java.util.Calendar
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     internal var user: FirebaseUser? = null
@@ -63,12 +56,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val navController = Navigation.findNavController(this, R.id.my_nav_host_frag)
         setupBottomNavMenu(navController)
 
         user = FirebaseAuth.getInstance().currentUser
         if (user == null) {
-            startActivity(Intent(this@MainActivity, SigninActivity::class.java))
+            startActivity(Intent(this@MainActivity, SignInActivity::class.java))
         }
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         if (!prefs.getBoolean("firstTime", false)) {
@@ -126,12 +120,12 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun signout(view: View) {
-        FirebaseAuth.getInstance().signOut()
-        finish()
-        startActivity(Intent(this@MainActivity, SigninActivity::class.java))
-
-    }
+//    fun signout(view: View) {
+//        FirebaseAuth.getInstance().signOut()
+//        finish()
+//        startActivity(Intent(this@MainActivity, SignInActivity::class.java))
+//
+//    }
 
 
     /**

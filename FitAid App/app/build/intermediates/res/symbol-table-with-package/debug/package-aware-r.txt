@@ -1314,6 +1314,7 @@ id btnCreate
 id btn_AddToJournal
 id btn_Save
 id btn_signin
+id btn_x
 id buttonPanel
 id cancel_action
 id center
@@ -1419,6 +1420,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id lvExercises
@@ -1564,6 +1566,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id videoView
 id view_offset_helper
 id visible
 id wide
@@ -1666,10 +1669,13 @@ layout select_dialog_singlechoice_material
 layout spinner_item
 layout spinner_item_dropdown
 layout support_simple_spinner_dropdown_item
+layout video
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
+raw trainwhistle
+raw trainwreck
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -34,7 +34,7 @@ public class ProfileFragment extends Fragment {
     //private String currentUser = SigninActivity.userId;
 
     HashMap<String,Double> statMap;
-    final String email = SigninActivity.userId.replaceAll("\\.", "");
+    final String email= SignInActivity.userId.replaceAll("\\.", "");
     final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
     private ArrayList<Double> inputText = new ArrayList<>();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
