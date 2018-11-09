@@ -1312,6 +1312,7 @@ id bottom_navigation_small_container
 id bottom_navigation_small_item_icon
 id bottom_navigation_small_item_title
 id bounce
+id btnAddSet
 id btnCreate
 id btn_AddToJournal
 id btn_Save
@@ -1410,10 +1411,10 @@ id inputChest
 id inputFat
 id inputLegL
 id inputLegR
-id inputReps
-id inputSets
 id inputWaist
 id inputWeight
+id input_rep1
+id input_rep2
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1471,6 +1472,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id rectangles
+id rep1_input_layout
+id rep2_input_layout
 id reverseSawtooth
 id right
 id right_icon
@@ -1547,9 +1550,8 @@ id text_input_legL
 id text_input_legR
 id text_input_password_toggle
 id text_input_reps
-id text_input_sets
 id text_input_waist
-id text_input_weight
+id text_input_weight1
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1572,11 +1574,11 @@ id triangle
 id tvCreateAccount
 id tvDate
 id tvReps
-id tvSet1
-id tvSet2
-id tvSet3
 id tvSet4
 id tvSets
+id tvSets1
+id tvSets2
+id tvSets3
 id tvWeight
 id tv_forgot_pass
 id txtMeasure
@@ -1695,6 +1697,10 @@ mipmap ic_launcher_round
 mipmap main_logo_text_copy
 mipmap main_page_top
 navigation nav_graph
+raw pullup
+raw pushup
+raw shoulderpress
+raw squat
 raw trainwhistle
 raw trainwreck
 string abc_action_bar_home_description

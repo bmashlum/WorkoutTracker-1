@@ -98,14 +98,14 @@ public class WorkoutFragment extends Fragment {
         lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 //hash map for videos by exercises
         final HashMap<String, Uri> uri = new HashMap<>();
-        uri.put("Squat", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Squat", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/squat"));
         uri.put("Leg Extension", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwhistle"));
         uri.put("Leg Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Seated Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Lying Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Seated Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
-        uri.put("Shoulder Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Shoulder Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/shoulderpress"));
         uri.put("Dumbbell Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Dumbbell Rear Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Tricep Pushdown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
@@ -116,7 +116,7 @@ public class WorkoutFragment extends Fragment {
         uri.put("Seated Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Incline Dumbbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Bicep Face Pull", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
-        uri.put("Pullup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pullup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/pullup"));
         uri.put("Lat Pulldown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Barbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Dumbbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
@@ -127,7 +127,7 @@ public class WorkoutFragment extends Fragment {
         uri.put("Incline Barbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Incline Dumbbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Chest Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
-        uri.put("Pushup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pushup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/pushup"));
         uri.put("Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Reverse Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Russian Twist", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
@@ -245,8 +245,8 @@ public class WorkoutFragment extends Fragment {
                                                          }
                                 );
                                 pw.setContentView(vv);
-                                pw.setWidth(700);
-                                pw.setHeight(800);
+                                pw.setWidth(600);
+                                pw.setHeight(1000);
                                 pw.setTouchable(true);
                                 pw.setFocusable(true);
                                 pw.setOutsideTouchable(true);
