@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navProfile"
+        android:title="Profile"
+        android:icon="@drawable/sharp_accessibility_black_18dp"
+        />
+    <item
+        android:id="@+id/navJournal"
+        android:title="Journal"
+        android:icon="@drawable/sharp_book_black_18dp"
+        />
+    <item
+        android:id="@+id/navWorkouts"
+        android:title="Workouts"
+        android:icon="@drawable/sharp_fitness_center_black_18dp"
+        />
+</menu>

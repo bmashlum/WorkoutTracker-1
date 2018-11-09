@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">968193091639-8i9bj7k8cb70snc74uqcuj436vhjoagj.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://fitaid-a0528.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">968193091639</string>
+    <string name="google_api_key" translatable="false">AIzaSyCUQLyxzfpqwz_O9JusFGUE_spiceRrljQ</string>
+    <string name="google_app_id" translatable="false">1:968193091639:android:0b85b45ad424e543</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCUQLyxzfpqwz_O9JusFGUE_spiceRrljQ</string>
+    <string name="google_storage_bucket" translatable="false">fitaid-a0528.appspot.com</string>
+    <string name="project_id" translatable="false">fitaid-a0528</string>
+</resources>

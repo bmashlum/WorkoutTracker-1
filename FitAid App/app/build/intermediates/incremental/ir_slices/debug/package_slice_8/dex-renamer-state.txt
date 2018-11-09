@@ -1,0 +1,4 @@
+#Wed Nov 07 21:54:01 EST 2018
+base.0=/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/transforms/dexMerger/debug/8
+path.0=classes.dex
+renamed.0=classes.dex
