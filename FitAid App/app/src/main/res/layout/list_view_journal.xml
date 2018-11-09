@@ -9,9 +9,9 @@
         android:gravity="center_vertical"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:checkMark="?android:attr/listChoiceIndicatorSingle"
         android:paddingStart="?android:attr/listPreferredItemPaddingStart"
         android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
-        android:paddingRight="?android:attr/listPreferredItemPaddingRight"/>
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:paddingVertical="10dp"/>

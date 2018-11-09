@@ -761,6 +761,7 @@ color design_fab_stroke_top_inner_color
 color design_fab_stroke_top_outer_color
 color design_snackbar_background_color
 color design_tint_password_toggle
+color dialog
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -1214,6 +1215,7 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable content_background
+drawable custom_button
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1310,9 +1312,11 @@ id bottom_navigation_small_container
 id bottom_navigation_small_item_icon
 id bottom_navigation_small_item_title
 id bounce
+id btnAddSet
 id btnCreate
 id btn_AddToJournal
 id btn_Save
+id btn_reset_pass
 id btn_signin
 id btn_x
 id buttonPanel
@@ -1362,6 +1366,7 @@ id etEmail
 id etEmailSign
 id etPass
 id etPassSign
+id et_email_reset_pass
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1386,6 +1391,7 @@ id ifRoom
 id image
 id imageView
 id imageView10
+id imageView11
 id imageView2
 id imageView3
 id imageView4
@@ -1407,6 +1413,8 @@ id inputLegL
 id inputLegR
 id inputWaist
 id inputWeight
+id input_rep1
+id input_rep2
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1464,6 +1472,8 @@ id progress_circular
 id progress_horizontal
 id radio
 id rectangles
+id rep1_input_layout
+id rep2_input_layout
 id reverseSawtooth
 id right
 id right_icon
@@ -1519,6 +1529,7 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
+id tableLayout
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1538,8 +1549,9 @@ id text_input_chest
 id text_input_legL
 id text_input_legR
 id text_input_password_toggle
+id text_input_reps
 id text_input_waist
-id text_input_weight
+id text_input_weight1
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1561,6 +1573,14 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
+id tvReps
+id tvSet4
+id tvSets
+id tvSets1
+id tvSets2
+id tvSets3
+id tvWeight
+id tv_forgot_pass
 id txtMeasure
 id uniform
 id unlabeled
@@ -1644,6 +1664,7 @@ layout design_text_input_password_icon
 layout fragment_journal
 layout fragment_profile
 layout fragment_workout
+layout layout_dialog
 layout list_view
 layout list_view_journal
 layout mtrl_layout_snackbar
@@ -1673,7 +1694,13 @@ layout video
 menu navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap main_logo_text_copy
+mipmap main_page_top
 navigation nav_graph
+raw pullup
+raw pushup
+raw shoulderpress
+raw squat
 raw trainwhistle
 raw trainwreck
 string abc_action_bar_home_description
@@ -1966,6 +1993,7 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style MyDialogTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

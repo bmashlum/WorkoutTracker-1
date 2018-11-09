@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "C:\\Users\\Brad\\WorkoutTracker\\FitAid App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\96cdaa5307c0455bab5edfe8b99ecec5\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/values-land/values-land.xml",
+                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\faf7660d4009fc065d5db2f6d5ff6426\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

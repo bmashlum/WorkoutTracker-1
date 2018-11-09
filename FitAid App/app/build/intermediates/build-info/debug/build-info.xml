@@ -1,82 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="27"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="26"
     build-mode="COLD"
     density="420dpi"
     format="10"
+    ir-eligibility="FIELD_REMOVED"
     plugin-version="3.3.0-alpha06"
-    timestamp="1541647227357"
-    token="2498324973904870334"
+    timestamp="1541779862995"
+    token="-3835256249310525662"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="446" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="43" />
     <task
         name="verifier"
-        duration="0" />
+        duration="11" />
 
     <artifact
-        location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1541645639385"
+        timestamp="1541779548982"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1541647227357"
+        ir-eligibility="FIELD_REMOVED"
+        timestamp="1541779862995"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
     </build>
 

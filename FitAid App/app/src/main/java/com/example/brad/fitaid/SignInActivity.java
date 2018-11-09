@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,14 +28,18 @@ public class SignInActivity extends AppCompatActivity {
     public static String userId= "";
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference( "/");
-
+    private TextView forgot_pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_sign_in);
         mAuth = FirebaseAuth.getInstance();
         email = findViewById( R.id.etEmailSign);
+
         ab = findViewById( R.id.etPassSign );
+        forgot_pass = (TextView) findViewById(R.id.tv_forgot_pass);
+
+
     }
 
     public void signinUser(View view) {
@@ -51,7 +56,9 @@ public class SignInActivity extends AppCompatActivity {
                                 Log.d("signin", "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 userEmail = email.getText().toString();
+                                userId = userEmail;
                                 startActivity( new Intent( SignInActivity.this, MainActivity.class ) );
+
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("signin", "signInWithEmail:failure", task.getException());
@@ -71,6 +78,9 @@ public class SignInActivity extends AppCompatActivity {
 
     public void gotoCreate(View view) {
         startActivity( new Intent (SignInActivity.this, CreateAccountActivity.class));
+    }
+    public void goToReset(View view){
+        startActivity( new Intent (SignInActivity.this, ForgotPasswordActivity.class));
     }
 
 }

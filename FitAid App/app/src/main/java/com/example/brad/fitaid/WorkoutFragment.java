@@ -11,6 +11,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
 import android.view.Gravity;
@@ -44,6 +46,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 import static android.widget.AdapterView.*;
 
@@ -54,7 +57,7 @@ import static android.widget.AdapterView.*;
 public class WorkoutFragment extends Fragment {
 
     DatabaseHelper myDb;
-    //private FragmentAListener listener;
+    private JournalViewModel viewModel = new JournalViewModel();
     private ArrayList<String> exercisesClicked = new ArrayList<>();
     //private ArrayList<String> exercisesClickedLong = new ArrayList<>();
     private ListView lvExercises;
@@ -64,20 +67,15 @@ public class WorkoutFragment extends Fragment {
     private String[] exercises, chest, back, abs, legs, biceps, triceps, shoulders;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("/workoutsChosen");
-private VideoView videoView;
+    private VideoView videoView;
     PopupWindow popUp;
     ConstraintLayout lapop;
     ConstraintLayout.LayoutParams parms;
     ConstraintLayout p;
+
     public WorkoutFragment() {
         // Required empty public constructor
     }
-
-    /**
-     * public interface FragmentAListener {
-     * void onInputASent(ArrayList<String> input);
-     * }
-     */
 
     @Nullable
     @Override
@@ -98,10 +96,44 @@ private VideoView videoView;
         videoView = v.findViewById(R.id.videoView);
         lvExercises = v.findViewById(R.id.lvExercises);
         lvExercises.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+//hash map for videos by exercises
+        final HashMap<String, Uri> uri = new HashMap<>();
+        uri.put("Squat", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/squat"));
+        uri.put("Leg Extension", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwhistle"));
+        uri.put("Leg Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Lying Leg Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Calf Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Shoulder Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/shoulderpress"));
+        uri.put("Dumbbell Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Rear Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Tricep Pushdown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Rope Pushdown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Bent-over Tricep Kickback", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Standing Dumbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Standing Barbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Dumbbell Curl", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Bicep Face Pull", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pullup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/pullup"));
+        uri.put("Lat Pulldown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Barbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Seated Row", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Inverse Pulldown", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Barbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Dumbbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Barbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Incline Dumbbell Bench Press", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Chest Fly", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Pushup", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/pushup"));
+        uri.put("Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Reverse Crunch", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Russian Twist", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
+        uri.put("Hanging Leg Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
 
-        final Uri uri = Uri.parse("android.resource://"+ getContext().getPackageName() +"/raw/trainwreck");
-
-       final VideoView vv = v.findViewById(R.id.videoView);
+        final VideoView vv = v.findViewById(R.id.videoView);
 //final MediaController mediaController = new MediaController(getContext());
         final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
 
@@ -112,24 +144,35 @@ private VideoView videoView;
             @Override
             public void onClick(View v) {
 
-                    WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal action =
-                            WorkoutFragmentDirections.actionNavWorkoutsToNavJournal(exercisesClicked.toString());
-                    action.setExercisesClicked(exercisesClicked.toString());
-                    Navigation.findNavController(v).navigate(action);
+                viewModel.setExercises(exercisesClicked);
+                System.out.println("TESTING VIEW" + exercisesClicked + " VIEW MODEL " + viewModel);
 
+                //Navigate to Journal Frag when button is clicked
+                WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal actionNavWorkoutsToNavJournal =
+                        WorkoutFragmentDirections.actionNavWorkoutsToNavJournal();
+                Navigation.findNavController(v).navigate(actionNavWorkoutsToNavJournal);
 
-                HashMap<String, String> exerciseMap = new HashMap<String, String>();
-                for (String exercise : exercisesClicked) {
-                    exerciseMap.put(exercise, date_n);
-                }
-                ref.setValue(exerciseMap);
+                //USING NAV ACTION SAFE ARGS TO TRANSFER DATA TO JOURNAL
+                /*
+                 WorkoutFragmentDirections.ActionNavWorkoutsToNavJournal action =
+                 WorkoutFragmentDirections.actionNavWorkoutsToNavJournal(exercisesClicked.toString());
+                 action.setExercisesClicked(exercisesClicked.toString());
+                 Navigation.findNavController(v).navigate(action);
+                */
 
-                System.out.println(exerciseMap.toString());
+                //PUSH WORKOUTS TO FIREBASE
+                /**
+                 HashMap<String, String> exerciseMap = new HashMap<String, String>();
+                 for (String exercise : exercisesClicked) {
+                 exerciseMap.put(exercise, date_n);
+                 }
+                 ref.setValue(exerciseMap);
+
+                 System.out.println(exerciseMap.toString());
+                 */
 
                 Toast.makeText(getContext(), "You are adding " + exercisesClicked.toString() + " to your journal", Toast.LENGTH_SHORT).show();
 
-                //System.out.println("****listenerWorkout:" + listener);
-                //listener.onInputASent(exercisesClicked);
             }
         });
 
@@ -148,7 +191,7 @@ private VideoView videoView;
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 final String pos = parentView.getItemAtPosition(position).toString();
                 final ArrayAdapter<String> adapter;
-               // final ArrayAdapter<String> nAdapter = adapter;
+                // final ArrayAdapter<String> nAdapter = adapter;
 
 
                 lvExercises.setOnItemClickListener(new OnItemClickListener() {
@@ -169,138 +212,54 @@ private VideoView videoView;
 
                     }
                 });
-
+//long press for popUp video
                 lvExercises.setOnItemLongClickListener(new OnItemLongClickListener() {
                     @Override
                     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                         String pos = parent.getItemAtPosition(position).toString();
-
-                        lapop = new ConstraintLayout(getContext());
-                        popUp = new PopupWindow(50, 100);
-
                         if (lvExercises.isLongClickable()) {
-                            //exercisesClickedLong.remove(pos);
                             Toast.makeText(getContext(), "You have selected " + pos, Toast.LENGTH_SHORT).show();
-                            //exercisesClickedLong.add(pos);
                             System.out.println("EXERCISES CLICKED long: " + pos);
-
-
                         }
-                        if (pos.equals("Squat")) {
 
-                            System.out.println("Squat");
-                        } else if (pos.equals("Leg Extension")) {
-                            System.out.println("Leg Extension");
-                        } else if (pos.equals("Leg Press")) {
-                            System.out.println("Leg Press");
-                        } else if (pos.equals("Seated Leg Curl")) {
-                            System.out.println("Seated Leg Curl");
-                        } else if (pos.equals("Lying Leg Curl")) {
-                            System.out.println("Lying Leg Curl");
-                        } else if (pos.equals("Calf Raise")) {
-                            System.out.println("Calf Raise");
-                        } else if (pos.equals("Seated Calf Raise")) {
-                            System.out.println("Seated Calf Raise");
-                        } else if (pos.equals("Shoulder Press")) {
-                            System.out.println("Shoulder Press");
-                        } else if (pos.equals("Dumbbell Fly")) {
-                            System.out.println("Dumbbell Fly");
-                        } else if (pos.equals("Dumbbell Rear Fly")) {
-                            System.out.println("Dumbbell Rear Fly");
-                        } else if (pos.equals("Tricep Pushdown")) {
-                            System.out.println("Tricep Pushdown");
-                        } else if (pos.equals("Rope Pushdown")) {
-                            System.out.println("Rope Pushdown");
-                        } else if (pos.equals("Bent-over Tricep Kickback")) {
-                            System.out.println("Bent-over Tricep Kickback");
-                        } else if (pos.equals("Standing Dumbell Curl")) {
-                            System.out.println("Standing Dumbell Curl");
-                        } else if (pos.equals("Standing Barbell Curl")) {
-                            System.out.println("Standing Barbell Curl");
-                        } else if (pos.equals("Seated Curl")) {
-                            System.out.println("Seated Curl");
-                        } else if (pos.equals("Incline Dumbbell Curl")) {
-                            System.out.println("Incline Dumbbell Curl");
-                        } else if (pos.equals("Bicep Face Pull")) {
-                            System.out.println("Bicep Face Pull");
-                        } else if (pos.equals("Pullup")) {
-                            System.out.println("Pullup");
-                        } else if (pos.equals("Lat Pulldown")) {
-                            System.out.println("Lat Pulldown");
-                        } else if (pos.equals("Barbell Row")) {
-                            System.out.println("Barbell Row");
-                        } else if (pos.equals("Dumbbell Row")) {
-                            System.out.println("Dumbbell Row");
-                        } else if (pos.equals("Seated Row")) {
-                            System.out.println("Seated Row");
-                        } else if (pos.equals("Inverse Pulldown")) {
-                            System.out.println("Inverse Pulldown");
-                        } else if (pos.equals("Barbell Bench Press")) {
-                            System.out.println("Barbell Bench Press");
-                        } else if (pos.equals("umbbell Bench Press")) {
-                            System.out.println("umbbell Bench Press");
-                        } else if (pos.equals("Incline Barbell Bench Press")) {
-                            System.out.println("Incline Barbell Bench Press");
-                        } else if (pos.equals("Incline Dumbbell Bench Press")) {
-                            System.out.println("Incline Dumbbell Bench Press");
-                        } else if (pos.equals("Chest Fly")) {
-                            System.out.println("Chest Fly");
-                        } else if (pos.equals("Pushup")) {
-                            System.out.println("Pushup");
-                        } else if (pos.equals("Crunch")) {
+                        Set<String> keys = uri.keySet();
+                        for (String key : keys) {
+                            //System.out.println( key );
 
-                          final PopupWindow pw = new PopupWindow(getActivity());
-                           TextView tv = new TextView(getActivity());
-                         final  VideoView vv = new VideoView(getActivity());
-
-                           LayoutParams linearparams1 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-                           vv.setLayoutParams(linearparams1);
-                           //tv.setText("Testing");
-                           final MediaController mediaController = new MediaController(getActivity());
-                           mediaController.setAnchorView(vv);
-                           vv.setMediaController(mediaController);
-                           vv.setVideoURI(uri);
-                           //vv.setVideoPath(uri.toString());
-                           vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                                        @Override
-                                                        public void onPrepared(MediaPlayer mp) {
-
-                                                            vv.requestFocus();
-                                                            vv.start();
-
-                                                        }
-                                                    }
-                           );
-
-                           pw.setContentView(vv);
-
-
-                           pw.setWidth(700);
-                           pw.setHeight(800);
-                            pw.setTouchable(true);
-                            pw.setFocusable(true);
-                            pw.setOutsideTouchable(true);
-
-                           pw.showAtLocation(lvExercises, Gravity.BOTTOM, 40, 500);
-                           pw.update();
-
-                           System.out.println("Crunch");
-                       }
-                       else if (pos.equals("Reverse Crunch")){
-                           System.out.println("Reverse Crunch");
-                       }
-                       else if (pos.equals("Russian Twist")){
-                           System.out.println("Russian Twist");
-                       }
-                       else if (pos.equals("Hanging Leg Raise")){
-                           System.out.println("Hanging Leg Raise");
-                       }
+                            if (pos.equals(key)) {
+                                final PopupWindow pw = new PopupWindow(getActivity());
+                                final VideoView vv = new VideoView(getActivity());
+                                LayoutParams linearparams1 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+                                vv.setLayoutParams(linearparams1);
+                                final MediaController mediaController = new MediaController(getActivity());
+                                mediaController.setAnchorView(vv);
+                                vv.setMediaController(mediaController);
+                                Uri myUri = uri.get(key);
+                                vv.setVideoURI(myUri);
+                                vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                                                             @Override
+                                                             public void onPrepared(MediaPlayer mp) {
+                                                                 vv.requestFocus();
+                                                                 vv.start();
+                                                             }
+                                                         }
+                                );
+                                pw.setContentView(vv);
+                                pw.setWidth(600);
+                                pw.setHeight(1000);
+                                pw.setTouchable(true);
+                                pw.setFocusable(true);
+                                pw.setOutsideTouchable(true);
+                                pw.showAtLocation(lvExercises, Gravity.BOTTOM, 20, 1000);
+                                pw.update();
+                                System.out.println(key + " , " + uri.get(key));
+                            }
+                        }
 
 
                         return false;
                     }
                 });
-
 
 
                 if (pos.compareToIgnoreCase("Chest") == 0) {
@@ -341,67 +300,7 @@ private VideoView videoView;
                     lvExercises.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
                 }
-
-//                lvExercises.setOnLongClickListener(new OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                        String pos = parent.getItemAtPosition(position).toString();
-//
-//                        if (lvExercises.isItemChecked(position)) {
-//                            exercisesClicked.remove(pos);
-//                            Toast.makeText(getContext(), "You have selected " + pos, Toast.LENGTH_SHORT).show();
-//                            exercisesClicked.add(pos);
-//                            System.out.println("EXERCISES CLICKED: " + exercisesClicked);
-//                        } else if (!lvExercises.isItemChecked(position)) {
-//                            exercisesClicked.remove(pos);
-//                            System.out.println("EXERCISES CLICKED: " + exercisesClicked);
-//                        }
-//
-//
-//                        if (pos.compareToIgnoreCase("Chest") == 0) {
-//                            imgTicker.setImageResource(R.drawable.chest);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, chest);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//
-//                        } else if (pos.compareToIgnoreCase("Shoulders") == 0) {
-//                            imgTicker.setImageResource(R.drawable.arms);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, shoulders);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        } else if (pos.compareToIgnoreCase("Abs") == 0) {
-//                            imgTicker.setImageResource(R.drawable.abs);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, abs);
-//                            System.out.println("****** getContext: " + getContext());
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        } else if (pos.compareToIgnoreCase("Biceps") == 0) {
-//                            imgTicker.setImageResource(R.drawable.arms);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, biceps);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        } else if (pos.compareToIgnoreCase("Triceps") == 0) {
-//                            imgTicker.setImageResource(R.drawable.arms);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, triceps);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        } else if (pos.compareToIgnoreCase("Legs") == 0) {
-//                            imgTicker.setImageResource(R.drawable.legs);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, legs);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        } else if (pos.compareToIgnoreCase("Back") == 0) {
-//                            imgTicker.setImageResource(R.drawable.back);
-//                            nAdapter = new ArrayAdapter<>(getContext(), R.layout.list_view, back);
-//                            lvExercises.setAdapter(nAdapter);
-//                            nAdapter.notifyDataSetChanged();
-//                        }
-//
-//                    );
             }
-
-
-
 
 
             @Override
@@ -413,6 +312,23 @@ private VideoView videoView;
 
         // Inflate the layout for this fragment
         return v;
+
+    }
+
+    // ViewModel LiveData Observer Implementation for exercises in lists
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        System.out.println("ONACTIVITY CREATED");
+
+        viewModel = ViewModelProviders.of(getActivity()).get(JournalViewModel.class);
+        viewModel.getExercises().observe(getViewLifecycleOwner(), new Observer<ArrayList<String>>() {
+            @Override
+            public void onChanged(ArrayList<String> strings) {
+                System.out.println("ONCHANGE CREATED");
+                //exercisesClicked.addAll(strings);
+            }
+        });
 
     }
 }
