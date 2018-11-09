@@ -35,13 +35,10 @@ public class SignInActivity extends AppCompatActivity {
         setContentView( R.layout.activity_sign_in);
         mAuth = FirebaseAuth.getInstance();
         email = findViewById( R.id.etEmailSign);
-<<<<<<< HEAD
-        pw = findViewById( R.id.etPassSign );
-=======
+
         ab = findViewById( R.id.etPassSign );
         forgot_pass = (TextView) findViewById(R.id.tv_forgot_pass);
 
->>>>>>> origin/resetPassword
 
     }
 
@@ -59,13 +56,9 @@ public class SignInActivity extends AppCompatActivity {
                                 Log.d("signin", "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 userEmail = email.getText().toString();
-<<<<<<< HEAD
-                                startActivity( new Intent( SigninActivity.this, MainActivity.class ) );
-                                System.out.println("TEST MAIL" + mail);
-
-=======
+                                userId = userEmail;
                                 startActivity( new Intent( SignInActivity.this, MainActivity.class ) );
->>>>>>> origin/resetPassword
+
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("signin", "signInWithEmail:failure", task.getException());

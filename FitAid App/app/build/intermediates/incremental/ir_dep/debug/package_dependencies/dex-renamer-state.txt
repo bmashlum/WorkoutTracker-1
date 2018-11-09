@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Wed Nov 07 00:00:43 EST 2018
+#Thu Nov 08 16:09:15 EST 2018
 base.0=C\:\\Users\\Brad\\WorkoutTracker\\FitAid App\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-=======
-#Thu Nov 08 11:18:06 EST 2018
-base.0=/Users/giladberman/Desktop/fitaid2/WorkoutTracker/FitAid App/app/build/intermediates/transforms/dexMerger/debug/10
->>>>>>> origin/resetPassword
 path.0=classes.dex
 renamed.0=classes.dex

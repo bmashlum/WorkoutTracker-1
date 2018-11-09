@@ -67,11 +67,12 @@ public class WorkoutFragment extends Fragment {
     private String[] exercises, chest, back, abs, legs, biceps, triceps, shoulders;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("/workoutsChosen");
-private VideoView videoView;
+    private VideoView videoView;
     PopupWindow popUp;
     ConstraintLayout lapop;
     ConstraintLayout.LayoutParams parms;
     ConstraintLayout p;
+
     public WorkoutFragment() {
         // Required empty public constructor
     }
@@ -132,7 +133,7 @@ private VideoView videoView;
         uri.put("Russian Twist", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
         uri.put("Hanging Leg Raise", Uri.parse("android.resource://" + getContext().getPackageName() + "/raw/trainwreck"));
 
-       final VideoView vv = v.findViewById(R.id.videoView);
+        final VideoView vv = v.findViewById(R.id.videoView);
 //final MediaController mediaController = new MediaController(getContext());
         final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
 
@@ -190,7 +191,7 @@ private VideoView videoView;
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 final String pos = parentView.getItemAtPosition(position).toString();
                 final ArrayAdapter<String> adapter;
-               // final ArrayAdapter<String> nAdapter = adapter;
+                // final ArrayAdapter<String> nAdapter = adapter;
 
 
                 lvExercises.setOnItemClickListener(new OnItemClickListener() {
@@ -222,12 +223,12 @@ private VideoView videoView;
                         }
 
                         Set<String> keys = uri.keySet();
-                        for ( String key : keys ) {
+                        for (String key : keys) {
                             //System.out.println( key );
 
-                            if (pos.equals(key)){
+                            if (pos.equals(key)) {
                                 final PopupWindow pw = new PopupWindow(getActivity());
-                                final  VideoView vv = new VideoView(getActivity());
+                                final VideoView vv = new VideoView(getActivity());
                                 LayoutParams linearparams1 = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
                                 vv.setLayoutParams(linearparams1);
                                 final MediaController mediaController = new MediaController(getActivity());
@@ -249,7 +250,7 @@ private VideoView videoView;
                                 pw.setTouchable(true);
                                 pw.setFocusable(true);
                                 pw.setOutsideTouchable(true);
-                                pw.showAtLocation(lvExercises, Gravity.BOTTOM, 40, 500);
+                                pw.showAtLocation(lvExercises, Gravity.BOTTOM, 20, 1000);
                                 pw.update();
                                 System.out.println(key + " , " + uri.get(key));
                             }
@@ -259,7 +260,6 @@ private VideoView videoView;
                         return false;
                     }
                 });
-
 
 
                 if (pos.compareToIgnoreCase("Chest") == 0) {
@@ -301,9 +301,6 @@ private VideoView videoView;
                     adapter.notifyDataSetChanged();
                 }
             }
-
-
-
 
 
             @Override

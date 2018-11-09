@@ -62,7 +62,6 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-<<<<<<< HEAD
         public static final int notification_action_background = 0x7f08009c;
         public static final int notification_bg = 0x7f08009e;
         public static final int notification_bg_low = 0x7f08009f;
@@ -75,20 +74,6 @@ public final class R {
         public static final int notification_template_icon_low_bg = 0x7f0800a6;
         public static final int notification_tile_bg = 0x7f0800a7;
         public static final int notify_panel_notification_icon_bg = 0x7f0800a8;
-=======
-        public static final int notification_action_background = 0x7f08009e;
-        public static final int notification_bg = 0x7f0800a0;
-        public static final int notification_bg_low = 0x7f0800a1;
-        public static final int notification_bg_low_normal = 0x7f0800a2;
-        public static final int notification_bg_low_pressed = 0x7f0800a3;
-        public static final int notification_bg_normal = 0x7f0800a4;
-        public static final int notification_bg_normal_pressed = 0x7f0800a5;
-        public static final int notification_icon_background = 0x7f0800a6;
-        public static final int notification_template_icon_bg = 0x7f0800a7;
-        public static final int notification_template_icon_low_bg = 0x7f0800a8;
-        public static final int notification_tile_bg = 0x7f0800a9;
-        public static final int notify_panel_notification_icon_bg = 0x7f0800aa;
->>>>>>> origin/resetPassword
     }
     public static final class id {
         private id() {}
@@ -100,49 +85,27 @@ public final class R {
         public static final int actions = 0x7f09001a;
         public static final int async = 0x7f090024;
         public static final int blocking = 0x7f090028;
-<<<<<<< HEAD
-        public static final int chronometer = 0x7f09003d;
-        public static final int forever = 0x7f09006f;
-        public static final int icon = 0x7f090076;
-        public static final int icon_group = 0x7f090077;
-        public static final int info = 0x7f090086;
-        public static final int italic = 0x7f090095;
-        public static final int line1 = 0x7f09009e;
-        public static final int line3 = 0x7f09009f;
-        public static final int normal = 0x7f0900b7;
-        public static final int notification_background = 0x7f0900b8;
-        public static final int notification_main_column = 0x7f0900b9;
-        public static final int notification_main_column_container = 0x7f0900ba;
-        public static final int right_icon = 0x7f0900ce;
-        public static final int right_side = 0x7f0900cf;
-        public static final int tag_transition_group = 0x7f090104;
-        public static final int tag_unhandled_key_event_manager = 0x7f090105;
-        public static final int tag_unhandled_key_listeners = 0x7f090106;
-        public static final int text = 0x7f090107;
-        public static final int text2 = 0x7f090108;
-=======
         public static final int chronometer = 0x7f09003f;
         public static final int forever = 0x7f090072;
         public static final int icon = 0x7f090079;
         public static final int icon_group = 0x7f09007a;
         public static final int info = 0x7f09008a;
-        public static final int italic = 0x7f090097;
-        public static final int line1 = 0x7f0900a0;
-        public static final int line3 = 0x7f0900a1;
-        public static final int normal = 0x7f0900ba;
-        public static final int notification_background = 0x7f0900bb;
-        public static final int notification_main_column = 0x7f0900bc;
-        public static final int notification_main_column_container = 0x7f0900bd;
-        public static final int right_icon = 0x7f0900d1;
-        public static final int right_side = 0x7f0900d2;
-        public static final int tag_transition_group = 0x7f090106;
-        public static final int tag_unhandled_key_event_manager = 0x7f090107;
-        public static final int tag_unhandled_key_listeners = 0x7f090108;
-        public static final int text = 0x7f090109;
-        public static final int text2 = 0x7f09010a;
->>>>>>> origin/resetPassword
-        public static final int time = 0x7f09011e;
-        public static final int title = 0x7f09011f;
+        public static final int italic = 0x7f090099;
+        public static final int line1 = 0x7f0900a2;
+        public static final int line3 = 0x7f0900a3;
+        public static final int normal = 0x7f0900bc;
+        public static final int notification_background = 0x7f0900bd;
+        public static final int notification_main_column = 0x7f0900be;
+        public static final int notification_main_column_container = 0x7f0900bf;
+        public static final int right_icon = 0x7f0900d3;
+        public static final int right_side = 0x7f0900d4;
+        public static final int tag_transition_group = 0x7f090109;
+        public static final int tag_unhandled_key_event_manager = 0x7f09010a;
+        public static final int tag_unhandled_key_listeners = 0x7f09010b;
+        public static final int text = 0x7f09010c;
+        public static final int text2 = 0x7f09010d;
+        public static final int time = 0x7f090123;
+        public static final int title = 0x7f090124;
     }
     public static final class integer {
         private integer() {}
@@ -167,23 +130,13 @@ public final class R {
     public static final class style {
         private style() {}
 
-<<<<<<< HEAD
-        public static final int TextAppearance_Compat_Notification = 0x7f11011c;
-        public static final int TextAppearance_Compat_Notification_Info = 0x7f11011d;
-        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f11011f;
-        public static final int TextAppearance_Compat_Notification_Time = 0x7f110122;
-        public static final int TextAppearance_Compat_Notification_Title = 0x7f110124;
-        public static final int Widget_Compat_NotificationActionContainer = 0x7f1101cb;
-        public static final int Widget_Compat_NotificationActionText = 0x7f1101cc;
-=======
-        public static final int TextAppearance_Compat_Notification = 0x7f12011b;
-        public static final int TextAppearance_Compat_Notification_Info = 0x7f12011c;
-        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f12011e;
-        public static final int TextAppearance_Compat_Notification_Time = 0x7f120121;
-        public static final int TextAppearance_Compat_Notification_Title = 0x7f120123;
-        public static final int Widget_Compat_NotificationActionContainer = 0x7f1201ca;
-        public static final int Widget_Compat_NotificationActionText = 0x7f1201cb;
->>>>>>> origin/resetPassword
+        public static final int TextAppearance_Compat_Notification = 0x7f12011c;
+        public static final int TextAppearance_Compat_Notification_Info = 0x7f12011d;
+        public static final int TextAppearance_Compat_Notification_Line2 = 0x7f12011f;
+        public static final int TextAppearance_Compat_Notification_Time = 0x7f120122;
+        public static final int TextAppearance_Compat_Notification_Title = 0x7f120124;
+        public static final int Widget_Compat_NotificationActionContainer = 0x7f1201cb;
+        public static final int Widget_Compat_NotificationActionText = 0x7f1201cc;
     }
     public static final class styleable {
         private styleable() {}

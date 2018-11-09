@@ -1236,10 +1236,7 @@ drawable ic_notifications_black_24dp
 drawable item_background
 drawable legs
 drawable listselector
-drawable loggoluncher
-drawable logoapp_background
 drawable main_logo_text
-drawable main_logo_text_copy
 drawable main_page_statusbar
 drawable main_page_top
 drawable main_toolbar
@@ -1574,7 +1571,6 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
-<<<<<<< HEAD
 id tvReps
 id tvSet1
 id tvSet2
@@ -1582,9 +1578,7 @@ id tvSet3
 id tvSet4
 id tvSets
 id tvWeight
-=======
 id tv_forgot_pass
->>>>>>> origin/resetPassword
 id txtMeasure
 id uniform
 id unlabeled

@@ -65,21 +65,12 @@ public final class R {
         public static final int adjust_height = 0x7f09001d;
         public static final int adjust_width = 0x7f09001e;
         public static final int auto = 0x7f090025;
-<<<<<<< HEAD
-        public static final int dark = 0x7f090048;
-        public static final int icon_only = 0x7f090078;
-        public static final int light = 0x7f09009d;
-        public static final int none = 0x7f0900b6;
-        public static final int standard = 0x7f0900fa;
-        public static final int wide = 0x7f09013e;
-=======
         public static final int dark = 0x7f09004a;
         public static final int icon_only = 0x7f09007b;
-        public static final int light = 0x7f09009f;
-        public static final int none = 0x7f0900b9;
-        public static final int standard = 0x7f0900fd;
-        public static final int wide = 0x7f090139;
->>>>>>> origin/resetPassword
+        public static final int light = 0x7f0900a1;
+        public static final int none = 0x7f0900bb;
+        public static final int standard = 0x7f0900ff;
+        public static final int wide = 0x7f090145;
     }
     public static final class string {
         private string() {}
