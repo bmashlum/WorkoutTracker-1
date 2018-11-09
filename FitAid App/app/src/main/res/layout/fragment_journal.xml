@@ -110,10 +110,12 @@
             android:layout_height="match_parent"
             android:paddingVertical="10dp">
 
-            <TextView
-                android:id="@+id/tvSet1"
-                android:text="Set 1"
-                android:textColor="@color/transpAccent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="10dp">
 
         </TableRow>
 
@@ -122,10 +124,6 @@
             android:layout_height="match_parent"
             android:paddingVertical="10dp">
 
-            <TextView
-                android:id="@+id/tvSet2"
-                android:text="Set 2"
-                android:textColor="@color/transpAccent" />
         </TableRow>
 
         <TableRow
@@ -133,21 +131,6 @@
             android:layout_height="match_parent"
             android:paddingVertical="10dp">
 
-            <TextView
-                android:id="@+id/tvSet3"
-                android:text="Set 3"
-                android:textColor="@color/transpAccent" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingVertical="10dp">
-
-            <TextView
-                android:id="@+id/tvSet4"
-                android:text="Set 4"
-                android:textColor="@color/transpAccent" />
         </TableRow>
     </TableLayout>
 
