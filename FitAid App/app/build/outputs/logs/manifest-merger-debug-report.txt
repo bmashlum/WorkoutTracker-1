@@ -11,6 +11,7 @@ MERGED from [android.arch.navigation:navigation-ui:1.0.0-alpha06] C:\Users\Brad\
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\faf7660d4009fc065d5db2f6d5ff6426\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\094199c7d21001a3aa9a0bfd7e079e69\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\96cdaa5307c0455bab5edfe8b99ecec5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-graphview-4.2.1.aar\c5d2d4f7faa4b6f0f65a11fc87a2c4ea\AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.firebase:firebase-database:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.0.3.aar\ec560cd7ce0b49374f4b6b64c4b09880\AndroidManifest.xml:15:1-25:12
 MERGED from [com.google.firebase:firebase-auth:16.0.4] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.0.4.aar\25b71cb02a6633c1ce12e0286e972c50\AndroidManifest.xml:17:1-38:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\play-services-flags-16.0.1.aar\64789c9a710eb44e56d7bbc7c628c5bf\AndroidManifest.xml:17:1-22:12
@@ -124,6 +125,8 @@ MERGED from [com.google.android.material:material:1.0.0] C:\Users\Brad\.gradle\c
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\faf7660d4009fc065d5db2f6d5ff6426\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\094199c7d21001a3aa9a0bfd7e079e69\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\094199c7d21001a3aa9a0bfd7e079e69\AndroidManifest.xml:9:5-20
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-graphview-4.2.1.aar\c5d2d4f7faa4b6f0f65a11fc87a2c4ea\AndroidManifest.xml:11:5-12:19
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-graphview-4.2.1.aar\c5d2d4f7faa4b6f0f65a11fc87a2c4ea\AndroidManifest.xml:11:5-12:19
 MERGED from [com.google.firebase:firebase-auth:16.0.4] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.0.4.aar\25b71cb02a6633c1ce12e0286e972c50\AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-auth:16.0.4] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.0.4.aar\25b71cb02a6633c1ce12e0286e972c50\AndroidManifest.xml:22:5-36:19
 MERGED from [com.google.firebase:firebase-auth-interop:16.0.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-interop-16.0.1.aar\ff8cd0a0c3a1121d4589039f7c488a3b\AndroidManifest.xml:7:5-8:19
@@ -242,6 +245,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\B
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\constraintlayout-2.0.0-alpha2.aar\094199c7d21001a3aa9a0bfd7e079e69\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\96cdaa5307c0455bab5edfe8b99ecec5\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\96cdaa5307c0455bab5edfe8b99ecec5\AndroidManifest.xml:20:5-44
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-graphview-4.2.1.aar\c5d2d4f7faa4b6f0f65a11fc87a2c4ea\AndroidManifest.xml:7:5-9:41
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-graphview-4.2.1.aar\c5d2d4f7faa4b6f0f65a11fc87a2c4ea\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-database:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.0.3.aar\ec560cd7ce0b49374f4b6b64c4b09880\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-database:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-database-16.0.3.aar\ec560cd7ce0b49374f4b6b64c4b09880\AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-auth:16.0.4] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-firebase-auth-16.0.4.aar\25b71cb02a6633c1ce12e0286e972c50\AndroidManifest.xml:20:5-44

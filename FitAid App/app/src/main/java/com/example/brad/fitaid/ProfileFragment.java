@@ -1,16 +1,24 @@
 package com.example.brad.fitaid;
 
 
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.textfield.TextInputEditText;
 
 import androidx.fragment.app.Fragment;
+
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,13 +26,18 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Locale;
+import java.util.Set;
 
 
 /**
@@ -40,9 +53,17 @@ public class ProfileFragment extends Fragment {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference("/" + email + "/" + date_n);
     DatabaseReference ref2 = database.getReference("/" + email);
+
     TextInputEditText etWeight, etBodyFat, etAge, etChest, etLeftArm, etRightArm, etWaist, etLeftLeg, etRightLeg, etLeftCalf, etRightCalf;
     double weight, bodyFat, age, chest, leftArm, rightArm, waist, leftLeg, rightLeg, leftCalf, rightCalf;
     Button btnSave;
+    Button btnGraph;
+    private  GraphView graphView;
+    private LinkedHashMap<String, Double> exerciseMap = new LinkedHashMap<String, Double>();
+
+    private ArrayList<Double> x_value = new ArrayList<>();
+    private ArrayList<Double> y_value = new ArrayList<>();
+    private double x = 0.0;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -57,6 +78,7 @@ public class ProfileFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         btnSave = v.findViewById(R.id.btn_Save);
+        btnGraph = v.findViewById(R.id.btn_graph);
 
         etWeight = v.findViewById(R.id.inputWeight);
         etBodyFat = v.findViewById(R.id.inputFat);
@@ -70,6 +92,13 @@ public class ProfileFragment extends Fragment {
         etLeftCalf = v.findViewById(R.id.inputCalfL);
         etRightCalf = v.findViewById(R.id.inputCalfR);
 
+
+
+
+
+
+
+
         Query lastQuery = ref2.orderByKey().limitToLast(1);
         lastQuery.addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -77,18 +106,18 @@ public class ProfileFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot data : dataSnapshot.getChildren())
                 {
-                     statMap = (HashMap) data.getValue();
-                     etWeight.setText(String.valueOf(statMap.get("Weight")));
-                     etBodyFat.setText(String.valueOf(statMap.get("Body Fat")));
-                     etAge.setText(String.valueOf(statMap.get("Age")));
-                     etChest.setText(String.valueOf(statMap.get("Chest")));
-                     etLeftArm.setText(String.valueOf(statMap.get("Left Arm")));
-                     etRightArm.setText(String.valueOf(statMap.get("Right Arm")));
-                     etWaist.setText(String.valueOf(statMap.get("Waist")));
-                     etLeftCalf.setText(String.valueOf(statMap.get("Left Calf")));
-                     etRightCalf.setText(String.valueOf(statMap.get("Right Calf")));
-                     etLeftLeg.setText(String.valueOf(statMap.get("Left Leg")));
-                     etRightLeg.setText(String.valueOf(statMap.get("Right Leg")));
+                    statMap = (HashMap) data.getValue();
+                    etWeight.setText(String.valueOf(statMap.get("Weight")));
+                    etBodyFat.setText(String.valueOf(statMap.get("Body Fat")));
+                    etAge.setText(String.valueOf(statMap.get("Age")));
+                    etChest.setText(String.valueOf(statMap.get("Chest")));
+                    etLeftArm.setText(String.valueOf(statMap.get("Left Arm")));
+                    etRightArm.setText(String.valueOf(statMap.get("Right Arm")));
+                    etWaist.setText(String.valueOf(statMap.get("Waist")));
+                    etLeftCalf.setText(String.valueOf(statMap.get("Left Calf")));
+                    etRightCalf.setText(String.valueOf(statMap.get("Right Calf")));
+                    etLeftLeg.setText(String.valueOf(statMap.get("Left Leg")));
+                    etRightLeg.setText(String.valueOf(statMap.get("Right Leg")));
 
                 }
             }
@@ -136,7 +165,14 @@ public class ProfileFragment extends Fragment {
                 inputText.add(rightCalf);
 
 
-                LinkedHashMap<String, Double> exerciseMap = new LinkedHashMap<String, Double>();
+
+
+
+
+
+
+
+                // LinkedHashMap<String, Double> exerciseMap = new LinkedHashMap<String, Double>();
 
                 exerciseMap.put("Weight", inputText.get(0));
                 exerciseMap.put("Body Fat", inputText.get(1));
@@ -154,6 +190,38 @@ public class ProfileFragment extends Fragment {
 
                 System.out.println("TESTINGG " + exerciseMap);
 
+            }
+        });
+
+        btnGraph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final PopupWindow pw = new PopupWindow(getActivity());
+                graphView = new GraphView(getActivity());
+                ViewGroup.LayoutParams linearparams1 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+
+                LineGraphSeries<DataPoint> lineSeries = new LineGraphSeries<>(new DataPoint[]{
+
+                        new DataPoint(1 , weight),
+                        new DataPoint(1.2, weight+40)
+
+
+                });
+                graphView.setTitle("Weight");
+
+                graphView.addSeries(lineSeries);
+
+                pw.setContentView(graphView);
+
+                pw.setWidth(750);
+                pw.setHeight(900);
+                pw.setTouchable(true);
+                pw.setFocusable(true);
+                pw.setOutsideTouchable(true);
+                pw.showAtLocation(v, Gravity.BOTTOM, 40, 500);
+                pw.update();
+                //System.out.println("date: " +date);
             }
         });
 

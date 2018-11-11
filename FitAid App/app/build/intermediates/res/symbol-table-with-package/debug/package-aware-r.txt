@@ -525,6 +525,10 @@ attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
 attr selectedBackgroundVisible
+attr seriesColor
+attr seriesData
+attr seriesTitle
+attr seriesType
 attr showAsAction
 attr showDividers
 attr showMotionSpec
@@ -1316,6 +1320,7 @@ id btnAddSet
 id btnCreate
 id btn_AddToJournal
 id btn_Save
+id btn_graph
 id btn_reset_pass
 id btn_signin
 id btn_x
@@ -1551,7 +1556,7 @@ id text_input_legR
 id text_input_password_toggle
 id text_input_reps
 id text_input_waist
-id text_input_weight1
+id text_input_weight
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2350,6 +2355,7 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable FragmentNavigator android_name
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable GraphViewXML android_title seriesColor seriesData seriesTitle seriesType
 styleable ImageFilterView altSrc brightness contrast crossfade saturation warmth
 styleable KeyAttribute android_visibility android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition progress target transitionEasing transitionPathRotate
 styleable KeyCycle android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition progress target transitionEasing transitionPathRotate waveOffset wavePeriod waveShape waveVariesBy
