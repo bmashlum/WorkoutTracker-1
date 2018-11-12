@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Brad\\WorkoutTracker\\FitAid App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/giladberman/Desktop/fitaidnew/WorkoutTracker/FitAid App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-1.0.0.aar\\8c9e7ebd5e474130a0210d2796a886f9\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/cardview-1.0.0.aar/45f5b0fefabd6c7fa00e94f2788472df/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\96cdaa5307c0455bab5edfe8b99ecec5\\res\\values-v23\\values-v23.xml",
+                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

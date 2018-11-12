@@ -71,5 +71,16 @@
         android:contentDescription="TODO"
         app:srcCompat="?android:attr/homeAsUpIndicator" />
 
+    <ImageButton
+        android:id="@+id/exit_btn2"
+        android:layout_width="39dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorAccent"
+        app:srcCompat="@android:drawable/btn_dialog" />
+
 
 </RelativeLayout>

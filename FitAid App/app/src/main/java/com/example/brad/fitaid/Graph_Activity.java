@@ -51,6 +51,7 @@ public class Graph_Activity extends AppCompatActivity {
     private int count=0;
     ImageButton backHome;
     ImageButton toBodyFat;
+    ImageButton exit_home;
 
 
     @Override
@@ -61,6 +62,7 @@ public class Graph_Activity extends AppCompatActivity {
         GraphView graph = (GraphView) findViewById(R.id.graph);
         backHome =  findViewById(R.id.backToHome);
         toBodyFat = findViewById(R.id.toBodyFat_btn);
+        exit_home = findViewById(R.id.exit_btn2);
 
         //DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users");
         ref.addListenerForSingleValueEvent(
@@ -116,6 +118,12 @@ public class Graph_Activity extends AppCompatActivity {
             }
         });
 
+        exit_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Graph_Activity.this, MainActivity.class));
+            }
+        });
     }
 
     private void collectWeight(Map<String,Object> dates) {

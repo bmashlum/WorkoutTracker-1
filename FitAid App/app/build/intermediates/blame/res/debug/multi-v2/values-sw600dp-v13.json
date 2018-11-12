@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Brad\\WorkoutTracker\\FitAid App\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+            "outputFile": "/Users/giladberman/Desktop/fitaidnew/WorkoutTracker/FitAid App/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\96cdaa5307c0455bab5edfe8b99ecec5\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/appcompat-1.0.0.aar/e55b784aa58f0a0bc1d5089a22c95512/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Brad\\.gradle\\caches\\transforms-1\\files-1.1\\material-1.0.0.aar\\faf7660d4009fc065d5db2f6d5ff6426\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "/Users/giladberman/.gradle/caches/transforms-1/files-1.1/material-1.0.0.aar/f295377ae6c1358333983d5156d082e3/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

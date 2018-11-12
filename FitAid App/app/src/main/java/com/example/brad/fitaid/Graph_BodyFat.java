@@ -42,6 +42,7 @@ public class Graph_BodyFat extends AppCompatActivity {
     private int count=0;
     ImageButton backHome;
     ImageButton toBodyFat;
+    ImageButton exit_home;
 
 
     @Override
@@ -52,6 +53,7 @@ public class Graph_BodyFat extends AppCompatActivity {
         GraphView graph = (GraphView) findViewById(R.id.graph_bodyFat);
         backHome =  findViewById(R.id.backToWeight);
         //toBodyFat = findViewById(R.id.toNext);
+        exit_home = findViewById(R.id.exit_btn);
 
         //DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users");
         ref.addListenerForSingleValueEvent(
@@ -59,7 +61,7 @@ public class Graph_BodyFat extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         //Get map of users in datasnapshot
-                        collectWeight((Map<String,Object>) dataSnapshot.getValue());
+                        collectBodyFat((Map<String,Object>) dataSnapshot.getValue());
                     }
 
                     @Override
@@ -84,7 +86,7 @@ public class Graph_BodyFat extends AppCompatActivity {
         viewport.setYAxisBoundsManual(true);
         viewport.setXAxisBoundsManual(true);
         viewport.setMinY(0);
-        viewport.setMaxY(250);
+        viewport.setMaxY(40);
         viewport.setMinX(20);
         viewport.setMaxX(24);
         viewport.setScrollable(true);
@@ -99,6 +101,13 @@ public class Graph_BodyFat extends AppCompatActivity {
             }
         });
 
+        exit_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Graph_BodyFat.this, MainActivity.class));
+            }
+        });
+
 //toBodyFat.setOnClickListener(new View.OnClickListener() {
 //    @Override
 //    public void onClick(View v) {
@@ -108,7 +117,7 @@ public class Graph_BodyFat extends AppCompatActivity {
 
     }
 
-    private void collectWeight(Map<String,Object> dates) {
+    private void collectBodyFat(Map<String,Object> dates) {
 
 //      final ArrayList<Long> weights = new ArrayList<>();
 

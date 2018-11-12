@@ -1390,6 +1390,8 @@ id etPass
 id etPassSign
 id et_email_reset_pass
 id exitUntilCollapsed
+id exit_btn
+id exit_btn2
 id expand_activities_button
 id expanded_menu
 id fill

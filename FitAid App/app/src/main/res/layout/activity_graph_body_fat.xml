@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btn_to_BodyFat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/main_page_top"
@@ -25,14 +24,14 @@
 
     <TextView
         android:id="@+id/tv_BodyFat_title"
-        android:layout_width="132dp"
-        android:layout_height="59dp"
+        android:layout_width="161dp"
+        android:layout_height="58dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="129dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="107dp"
         android:text="Body Fat"
         android:textColor="@color/colorAccent"
         android:textSize="38sp"
@@ -71,4 +70,15 @@
         android:background="@color/colorAccent"
         android:contentDescription="TODO"
         app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/exit_btn"
+        android:layout_width="39dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/colorAccent"
+        app:srcCompat="@android:drawable/btn_dialog" />
 </RelativeLayout>
