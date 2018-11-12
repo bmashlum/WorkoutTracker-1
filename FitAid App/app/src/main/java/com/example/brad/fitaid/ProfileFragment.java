@@ -1,6 +1,7 @@
 package com.example.brad.fitaid;
 
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -196,32 +197,7 @@ public class ProfileFragment extends Fragment {
         btnGraph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final PopupWindow pw = new PopupWindow(getActivity());
-                graphView = new GraphView(getActivity());
-                ViewGroup.LayoutParams linearparams1 = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-
-
-                LineGraphSeries<DataPoint> lineSeries = new LineGraphSeries<>(new DataPoint[]{
-
-                        new DataPoint(1 , weight),
-                        new DataPoint(1.2, weight+40)
-
-
-                });
-                graphView.setTitle("Weight");
-
-                graphView.addSeries(lineSeries);
-
-                pw.setContentView(graphView);
-
-                pw.setWidth(750);
-                pw.setHeight(900);
-                pw.setTouchable(true);
-                pw.setFocusable(true);
-                pw.setOutsideTouchable(true);
-                pw.showAtLocation(v, Gravity.BOTTOM, 40, 500);
-                pw.update();
-                //System.out.println("date: " +date);
+                startActivity(new Intent(getActivity() , Graph_Activity.class));
             }
         });
 
