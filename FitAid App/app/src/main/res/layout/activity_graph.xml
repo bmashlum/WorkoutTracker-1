@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_to_BodyFat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_page_top"
+    tools:context=".Graph_Activity">
+
+    <ImageButton
+        android:id="@+id/toBodyFat_btn"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="23dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="TODO"
+        android:scaleX="-1"
+        app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+    <TextView
+        android:id="@+id/tv_BodyFat_title"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="129dp"
+        android:text="Weight"
+        android:textColor="@color/colorAccent"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/tv_BodyFat_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="71dp"
+        android:background="@color/mainPageColor"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+        android:outlineSpotShadowColor="@color/colorAccent" tools:targetApi="p" />
+
+    <ImageButton
+        android:id="@+id/backToHome"
+        android:layout_width="37dp"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="21dp"
+        android:background="@color/colorAccent"
+        android:contentDescription="TODO"
+        app:srcCompat="?android:attr/homeAsUpIndicator" />
+
+
+</RelativeLayout>
