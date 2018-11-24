@@ -6,80 +6,63 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tvSet4"
+        android:id="@+id/tvSets4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="160dp"
         android:layout_marginEnd="8dp"
         android:text="Set 4"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/text_input_reps"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddSet" />
+        app:layout_constraintTop_toBottomOf="@+id/rep1_input_layout" />
 
     <TextView
         android:id="@+id/tvSets1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:text="Set 1"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_reps"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintBottom_toTopOf="@+id/tvSets2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddSet" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672" />
 
     <TextView
         android:id="@+id/tvSets2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="36dp"
         android:text="Set 2"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_reps"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddSet" />
+        app:layout_constraintTop_toBottomOf="@+id/rep1_input_layout" />
 
     <TextView
         android:id="@+id/tvSets3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
         android:text="Set 3"
         android:textColor="@color/colorAccent"
         android:textSize="20sp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toStartOf="@+id/text_input_reps"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddSet" />
-
-    <Button
-        android:id="@+id/btnAddSet"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="Add Set"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rep1_input_layout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/rep1_input_layout"
@@ -88,13 +71,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:textColorHint="@color/transpAccent"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_rep1"
@@ -106,7 +92,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/rep2_input_layout"
+        android:id="@+id/weight1_input_layout"
         android:layout_width="66dp"
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
@@ -119,12 +105,162 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_weight1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Weight"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rep2_input_layout"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.031">
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_rep2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
+            android:hint="Reps"
             android:textColor="@color/colorAccent"
-            android:textColorHint="@color/transpAccent"
-            android:hint="Weight" />
+            android:textColorHint="@color/transpAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weight2_input_layout"
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_weight2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Weight"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rep3_input_layout"
+        android:layout_width="68dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_rep3"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:hint="Reps"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weight3_input_layout"
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_weight3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Weight"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rep4_input_layout"
+        android:layout_width="68dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_rep4"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:hint="Reps"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/weight4_input_layout"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/transpAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_weight4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Weight"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/transpAccent" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

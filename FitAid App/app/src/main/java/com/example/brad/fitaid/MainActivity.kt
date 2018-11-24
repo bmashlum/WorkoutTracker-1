@@ -17,6 +17,7 @@ import android.view.Menu
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.ui.NavigationUI
 
@@ -30,18 +31,15 @@ import java.util.Calendar
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
+
     internal var user: FirebaseUser? = null
     private var fragmentA: WorkoutFragment? = null
     private var fragmentB: JournalFragment? = null
-    private val profileFragment: ProfileFragment? = null
     internal val database = FirebaseDatabase.getInstance()
     internal var ref = database.getReference("server/workoutsChosen")
 
-    internal var btnProfile: Button? = null
-    internal var btnJournal: Button? = null
-    internal var btnWorkouts: Button? = null
-    internal var btnSettings: Button? = null
-
+    internal var btnAddSet: Button? = null
+    internal var tvSet2: TextView? = null
     internal var imgNavBar: ImageView? = null
     internal var imgNavBarColors: ImageView? = null
 
@@ -149,6 +147,7 @@ class MainActivity : AppCompatActivity() {
     fun settingsClicked(target: View) {
         imgNavBar!!.setImageResource(R.drawable.bottom_menu_blue)
     }
+
 
 
     override fun onPointerCaptureChanged(hasCapture: Boolean) {

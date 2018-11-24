@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-ktx-1.0.0-alpha06.aar\0f971d858a276d4dae4ea4440cbdf410\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-ui-ktx-1.0.0-alpha06.aar\e44c21f0dfcfbc4a4cae265291ea424a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.aurelhubert:ahbottomnavigation:2.2.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-ahbottomnavigation-2.2.0.aar\d89fc989654f5b645a210778c3f76140\AndroidManifest.xml:2:1-13:12
@@ -76,22 +76,22 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Brad\.gr
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\785c09e6cd1e9f669aff144404c9c31d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-ads-base:17.1.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\play-services-ads-base-17.1.0.aar\a4d956a9aa0dc82066d00d8955c88b4b\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\f0cd47529bbd2879f9f64bb357fc9568\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
-INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 	package
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:4:5-38
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-49:12
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 		INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:11-69
@@ -132,7 +132,7 @@ ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:8:22-78
 application
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:10:5-47:19
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:10:5-48:19
 MERGED from [com.aurelhubert:ahbottomnavigation:2.2.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-ahbottomnavigation-2.2.0.aar\d89fc989654f5b645a210778c3f76140\AndroidManifest.xml:11:5-20
 MERGED from [com.aurelhubert:ahbottomnavigation:2.2.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-ahbottomnavigation-2.2.0.aar\d89fc989654f5b645a210778c3f76140\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\material-1.0.0.aar\faf7660d4009fc065d5db2f6d5ff6426\AndroidManifest.xml:22:5-20
@@ -208,7 +208,9 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Us
 	android:theme
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:16:9-40
 activity#com.example.brad.fitaid.MainActivity
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:18:9-21:59
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:18:9-22:51
+	android:screenOrientation
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:22:13-49
 	android:label
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:20:13-45
 	android:theme
@@ -216,59 +218,59 @@ ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:19:13-41
 activity#com.example.brad.fitaid.SignInActivity
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:22:9-28:20
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:23:9-29:20
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:22:19-49
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:23:19-49
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:23:13-27:29
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:24:17-69
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:24:25-66
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:26:17-77
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:26:27-74
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:27:27-74
 activity#com.example.brad.fitaid.ForgotPasswordActivity
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:29:9-60
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:30:9-60
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:29:19-57
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:30:19-57
 receiver#com.example.brad.fitaid.DeviceBootReceiver
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:31:9-35:20
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:32:9-36:20
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:31:19-53
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:32:19-53
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:32:13-34:29
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:33:13-35:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:33:17-79
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:34:17-79
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:33:25-76
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:34:25-76
 receiver#com.example.brad.fitaid.AlarmReceiver
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:36:9-51
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:37:9-51
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:36:19-48
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:37:19-48
 activity#com.example.brad.fitaid.CreateAccountActivity
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:38:9-59
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:39:9-59
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:38:19-56
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:39:19-56
 activity#com.example.brad.fitaid.MainMessaging
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:39:9-51
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:40:9-51
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:39:19-48
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:40:19-48
 activity#com.example.brad.fitaid.Graph_Activity
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:40:9-61
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:41:9-61
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:40:19-49
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:41:19-49
 meta-data#com.google.android.gms.ads.AD_MANAGER_APP
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:42:9-44:36
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:43:9-45:36
 	android:value
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:44:13-33
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:45:13-33
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:43:13-69
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:44:13-69
 activity#com.example.brad.fitaid.Graph_BodyFat
-ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:46:9-60
+ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:47:9-60
 	android:name
-		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:46:19-48
+		ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:47:19-48
 uses-sdk
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml

@@ -1247,6 +1247,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable item_background
+drawable journal_back2
 drawable legs
 drawable listselector
 drawable main_logo_text
@@ -1332,7 +1333,6 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-id btnAddSet
 id btnCreate
 id btn_AddToJournal
 id btn_Save
@@ -1439,6 +1439,12 @@ id inputWaist
 id inputWeight
 id input_rep1
 id input_rep2
+id input_rep3
+id input_rep4
+id input_weight1
+id input_weight2
+id input_weight3
+id input_weight4
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -1498,6 +1504,8 @@ id radio
 id rectangles
 id rep1_input_layout
 id rep2_input_layout
+id rep3_input_layout
+id rep4_input_layout
 id reverseSawtooth
 id right
 id right_icon
@@ -1553,7 +1561,6 @@ id stretch
 id submenuarrow
 id submit_area
 id tabMode
-id tableLayout
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1599,13 +1606,21 @@ id transition_transform
 id triangle
 id tvCreateAccount
 id tvDate
+id tvRep1
+id tvRep2
+id tvRep3
+id tvRep4
 id tvReps
-id tvSet4
 id tvSets
 id tvSets1
 id tvSets2
 id tvSets3
+id tvSets4
 id tvWeight
+id tvWeight1
+id tvWeight2
+id tvWeight3
+id tvWeight4
 id tv_BodyFat_title
 id tv_forgot_pass
 id txtMeasure
@@ -1616,6 +1631,10 @@ id useLogo
 id videoView
 id view_offset_helper
 id visible
+id weight1_input_layout
+id weight2_input_layout
+id weight3_input_layout
+id weight4_input_layout
 id wide
 id withText
 id wrap
@@ -1694,6 +1713,7 @@ layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_journal
 layout fragment_profile
+layout fragment_select_date
 layout fragment_workout
 layout layout_dialog
 layout list_view
@@ -1734,6 +1754,10 @@ raw shoulderpress
 raw squat
 raw trainwhistle
 raw trainwreck
+string _1
+string _2
+string _3
+string _4
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1774,6 +1798,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string add
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -1806,6 +1831,7 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string graph
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string login
@@ -1819,6 +1845,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string reps
 string s1
 string s2
 string s3
@@ -1826,9 +1853,12 @@ string s4
 string s5
 string s6
 string s7
+string save
 string search_menu_title
+string sets
 string status_bar_notification_info_overflow
 string title_activity_main2
+string weight
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

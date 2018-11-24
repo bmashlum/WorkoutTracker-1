@@ -36,6 +36,8 @@ import static android.app.PendingIntent.getActivity;
 
 public class Graph_Activity extends AppCompatActivity {
 
+
+
     final String email= SignInActivity.userId.replaceAll("\\.", "");
     final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
