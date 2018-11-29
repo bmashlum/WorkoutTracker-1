@@ -42,7 +42,7 @@ public class Graph_Activity extends AppCompatActivity {
     final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     // DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("users").child("date");
-    DatabaseReference ref = database.getReference("/" + email);
+    DatabaseReference ref = database.getReference("/" + email + "/" + "Health Stats");
 
     private static final Random RANDOM = new Random();
     private LineGraphSeries<DataPoint> series;

@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.3.0-alpha06"
-    timestamp="1543298872471"
+    timestamp="1543527615979"
     token="-3835256249310525662"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1298" />
+        duration="618" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="128" />
+        duration="67" />
     <task
         name="verifier"
-        duration="126" />
+        duration="6" />
 
     <artifact
         location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
@@ -30,8 +30,11 @@
 
     <build
         build-mode="FULL"
-        timestamp="1543298736253"
+        timestamp="1543527495064"
         verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
         <artifact
             location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
@@ -63,9 +66,6 @@
             location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
             location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
@@ -75,7 +75,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1543298872471"
+        timestamp="1543527615979"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\Brad\WorkoutTracker\FitAid App\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
