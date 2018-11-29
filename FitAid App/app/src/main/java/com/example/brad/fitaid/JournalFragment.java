@@ -21,6 +21,8 @@ import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -91,7 +93,13 @@ public class JournalFragment extends Fragment {
         weight3 = v.findViewById(R.id.tvWeight3);
         weight4 = v.findViewById(R.id.tvWeight4);
 
-        hideTextViews();
+        /**hideTextViews();
+        new ShowcaseView.Builder(getActivity())
+                .setTarget(new ActionViewTarget(getActivity(), ActionViewTarget.Type.SPINNER))
+                .setContentTitle("ShowcaseView")
+                .setContentText("This is highlighting the Home button")
+                .hideOnTouchOutside()
+                .build();*/
 
         lvJournalEntries = v.findViewById(R.id.lvJournalEntries);
 

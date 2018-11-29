@@ -538,6 +538,7 @@ attr showMotionSpec
 attr showPaths
 attr showText
 attr showTitle
+attr showcaseViewStyle
 attr singleChoiceItemLayout
 attr singleLine
 attr singleSelection
@@ -569,6 +570,16 @@ attr subtitleTextAppearance
 attr subtitleTextColor
 attr subtitleTextStyle
 attr suggestionRowLayout
+attr sv_backgroundColor
+attr sv_buttonBackgroundColor
+attr sv_buttonForegroundColor
+attr sv_buttonText
+attr sv_detailTextAppearance
+attr sv_detailTextColor
+attr sv_showcaseColor
+attr sv_tintButtonColor
+attr sv_titleTextAppearance
+attr sv_titleTextColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -925,6 +936,7 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen action_bar_offset
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen bottom_navigation_elevation
@@ -962,6 +974,7 @@ dimen bottom_navigation_text_size_forced_inactive
 dimen bottom_navigation_text_size_inactive
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
+dimen button_margin
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -1095,10 +1108,15 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen showcase_radius
+dimen showcase_radius_inner
+dimen showcase_radius_material
+dimen showcase_radius_outer
 dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
+dimen text_padding
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -1202,12 +1220,18 @@ drawable bottom_menu
 drawable bottom_menu_blue
 drawable bottom_menu_green
 drawable bottom_menu_yellow
+drawable btn_cling_normal
+drawable btn_cling_pressed
 drawable button
 drawable button_disabled
 drawable button_enabled
 drawable button_focused
+drawable button_normal
 drawable button_pressed
 drawable chest
+drawable cling
+drawable cling_bleached
+drawable cling_button_bg
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1237,6 +1261,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable hand
 drawable ic_dashboard_black_24dp
 drawable ic_dropdown
 drawable ic_home_black_24dp
@@ -1536,6 +1561,9 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id showcase_button
+id showcase_sub_text
+id showcase_title_text
 id sin
 id smallLabel
 id snackbar_action
@@ -1715,6 +1743,7 @@ layout fragment_journal
 layout fragment_profile
 layout fragment_select_date
 layout fragment_workout
+layout handy
 layout layout_dialog
 layout list_view
 layout list_view_journal
@@ -1738,6 +1767,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout showcase_button
 layout spinner_item
 layout spinner_item_dropdown
 layout support_simple_spinner_dropdown_item
@@ -1838,6 +1868,7 @@ string login
 string mtrl_chip_close_icon_content_description
 string name
 string not_a_member_yet
+string ok
 string password
 string password_toggle_content_description
 string path_password_eye
@@ -2093,6 +2124,9 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style ShowcaseButton
+style ShowcaseView
+style ShowcaseView_Light
 style SpinnerDropDownItem
 style SpinnerItem
 style TextAppearance_AppCompat
@@ -2176,6 +2210,10 @@ style TextAppearance_MaterialComponents_Overline
 style TextAppearance_MaterialComponents_Subtitle1
 style TextAppearance_MaterialComponents_Subtitle2
 style TextAppearance_MaterialComponents_Tab
+style TextAppearance_ShowcaseView_Detail
+style TextAppearance_ShowcaseView_Detail_Light
+style TextAppearance_ShowcaseView_Title
+style TextAppearance_ShowcaseView_Title_Light
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
@@ -2408,6 +2446,7 @@ styleable ConstraintSet android_orientation android_id android_visibility androi
 styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customStringValue
+styleable CustomTheme showcaseViewStyle
 styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DirectLabel text textColor textSize
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
@@ -2460,6 +2499,7 @@ styleable RecyclerView android_orientation android_descendantFocusability fastSc
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable ShowcaseView sv_backgroundColor sv_buttonBackgroundColor sv_buttonForegroundColor sv_buttonText sv_detailTextAppearance sv_detailTextColor sv_showcaseColor sv_tintButtonColor sv_titleTextAppearance sv_titleTextColor
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth

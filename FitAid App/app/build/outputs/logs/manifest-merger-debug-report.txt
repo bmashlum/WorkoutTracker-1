@@ -4,6 +4,7 @@ ADDED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml:2:1-50:12
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-library-5.4.3.aar\34f8dd628888f362331c0ea019c3082f\AndroidManifest.xml:17:1-26:12
 MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-ktx-1.0.0-alpha06.aar\0f971d858a276d4dae4ea4440cbdf410\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-ui-ktx-1.0.0-alpha06.aar\e44c21f0dfcfbc4a4cae265291ea424a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.aurelhubert:ahbottomnavigation:2.2.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-ahbottomnavigation-2.2.0.aar\d89fc989654f5b645a210778c3f76140\AndroidManifest.xml:2:1-13:12
@@ -40,12 +41,11 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Bra
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\faad6456aba591b1ab3c275a68f87deb\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:17:1-25:12
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\ca39ec8fc23dd7e163fdc7e14904c125\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\56c8f11a26ad60a1b2044df0a881aad5\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.browser:browser:1.0.0-rc01] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\browser-1.0.0-rc01.aar\8fc75c7c38b45dd5767445b9be6627c0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\44c5db3cbd7d1b0da82cb07a53f02939\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-1.0.0-alpha07.aar\5f9a30cbaabd4adcd647fd66d3a91e5b\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\597d78c9d1dd12a2bd234e2c0a075a78\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\transition-1.0.0.aar\d5e8fc1585bdbb1ad04e43f1b99ef0ea\AndroidManifest.xml:17:1-22:12
@@ -58,6 +58,7 @@ MERGED from [androidx.customview:customview:1.0.0] C:\Users\Brad\.gradle\caches\
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\3b499989852261a3c3427c2dc430c265\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\2ac2f8549b307a3774b246e31ae9f2e2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1019bf69f08188a950392f32d01cc766\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-1.0.0-alpha07.aar\79e44edf6db98d0c6010052c0f6a58e6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\4e0cbfaf99712bdd429e9fdb38bc3251\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0.aar\8c9e7ebd5e474130a0210d2796a886f9\AndroidManifest.xml:17:1-22:12
@@ -275,6 +276,8 @@ uses-sdk
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Brad\WorkoutTracker\FitAid App\app\src\main\AndroidManifest.xml
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-library-5.4.3.aar\34f8dd628888f362331c0ea019c3082f\AndroidManifest.xml:22:5-24:41
+MERGED from [com.github.amlcurran.showcaseview:library:5.4.3] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-library-5.4.3.aar\34f8dd628888f362331c0ea019c3082f\AndroidManifest.xml:22:5-24:41
 MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-ktx-1.0.0-alpha06.aar\0f971d858a276d4dae4ea4440cbdf410\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-ktx-1.0.0-alpha06.aar\0f971d858a276d4dae4ea4440cbdf410\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-ui-ktx-1.0.0-alpha06.aar\e44c21f0dfcfbc4a4cae265291ea424a\AndroidManifest.xml:20:5-44
@@ -347,10 +350,6 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.0.0-alpha1.aar\9bcc90dfb71b14f6cbccea2bb409f871\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-fragment:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-fragment-1.0.0-alpha07.aar\eb36b76e29d7af8b0cb1e8cba633630d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\ca39ec8fc23dd7e163fdc7e14904c125\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\ca39ec8fc23dd7e163fdc7e14904c125\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0.aar\56c8f11a26ad60a1b2044df0a881aad5\AndroidManifest.xml:20:5-44
@@ -359,6 +358,8 @@ MERGED from [androidx.browser:browser:1.0.0-rc01] C:\Users\Brad\.gradle\caches\t
 MERGED from [androidx.browser:browser:1.0.0-rc01] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\browser-1.0.0-rc01.aar\8fc75c7c38b45dd5767445b9be6627c0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\44c5db3cbd7d1b0da82cb07a53f02939\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\44c5db3cbd7d1b0da82cb07a53f02939\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-runtime-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-ktx-1.0.0-alpha06.aar\687f1d5e90328402f9179cdf5b03b002\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-1.0.0-alpha07.aar\5f9a30cbaabd4adcd647fd66d3a91e5b\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-runtime:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-runtime-1.0.0-alpha07.aar\5f9a30cbaabd4adcd647fd66d3a91e5b\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\597d78c9d1dd12a2bd234e2c0a075a78\AndroidManifest.xml:20:5-44
@@ -383,6 +384,8 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Br
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\2ac2f8549b307a3774b246e31ae9f2e2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1019bf69f08188a950392f32d01cc766\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\1019bf69f08188a950392f32d01cc766\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.navigation:navigation-common-ktx:1.0.0-alpha06] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-ktx-1.0.0-alpha06.aar\5c18748a0fd1d7a0c9263713f8749ced\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-1.0.0-alpha07.aar\79e44edf6db98d0c6010052c0f6a58e6\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.navigation:navigation-common:1.0.0-alpha07] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\jetified-navigation-common-1.0.0-alpha07.aar\79e44edf6db98d0c6010052c0f6a58e6\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.0.0] C:\Users\Brad\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\4e0cbfaf99712bdd429e9fdb38bc3251\AndroidManifest.xml:20:5-44
