@@ -66,7 +66,6 @@ public class WorkoutFragment extends Fragment {
     private Button addToJournal;
     private String[] exercises, chest, back, abs, legs, biceps, triceps, shoulders;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("/workoutsChosen");
     private VideoView videoView;
     PopupWindow popUp;
     ConstraintLayout lapop;

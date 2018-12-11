@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.ActionViewTarget;
 import com.google.android.material.textfield.TextInputEditText;
 
 import androidx.fragment.app.Fragment;
@@ -47,19 +51,19 @@ import java.util.Set;
 public class ProfileFragment extends Fragment {
     //private String currentUser = SigninActivity.userId;
 
-    HashMap<String,Double> statMap = new HashMap<>();
-    final String email= SignInActivity.userId.replaceAll("\\.", "");
+    HashMap<String, Double> statMap = new HashMap<>();
+    final String email = SignInActivity.userId.replaceAll("\\.", "");
     final String date_n = new SimpleDateFormat("M,dd,yyyy", Locale.getDefault()).format(new Date());
     private ArrayList<Double> inputText = new ArrayList<>();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference ref = database.getReference("/" + email + "/" + date_n);
-    DatabaseReference ref2 = database.getReference("/" + email);
+    DatabaseReference ref = database.getReference("/" + email + "/" + "Health Stats" + "/" + date_n);
+    DatabaseReference ref2 = database.getReference("/" + email + "/" + "Health Stats");
 
     TextInputEditText etWeight, etBodyFat, etAge, etChest, etLeftArm, etRightArm, etWaist, etLeftLeg, etRightLeg, etLeftCalf, etRightCalf;
     double weight, bodyFat, age, chest, leftArm, rightArm, waist, leftLeg, rightLeg, leftCalf, rightCalf;
     Button btnSave;
     Button btnGraph;
-    private  GraphView graphView;
+    private GraphView graphView;
     private LinkedHashMap<String, Double> exerciseMap = new LinkedHashMap<String, Double>();
 
     private ArrayList<Double> x_value = new ArrayList<>();
@@ -94,20 +98,14 @@ public class ProfileFragment extends Fragment {
         etRightCalf = v.findViewById(R.id.inputCalfR);
 
 
-
-
-
-
-
-
         Query lastQuery = ref2.orderByKey().limitToLast(1);
         lastQuery.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot data : dataSnapshot.getChildren())
-                {
+                for (DataSnapshot data : dataSnapshot.getChildren()) {
                     statMap = (HashMap) data.getValue();
+                    System.out.println("PROFILE GET" + data.getValue());
                     etWeight.setText(String.valueOf(statMap.get("Weight")));
                     etBodyFat.setText(String.valueOf(statMap.get("Body Fat")));
                     etAge.setText(String.valueOf(statMap.get("Age")));
@@ -119,7 +117,6 @@ public class ProfileFragment extends Fragment {
                     etRightCalf.setText(String.valueOf(statMap.get("Right Calf")));
                     etLeftLeg.setText(String.valueOf(statMap.get("Left Leg")));
                     etRightLeg.setText(String.valueOf(statMap.get("Right Leg")));
-
                 }
             }
 
@@ -152,7 +149,6 @@ public class ProfileFragment extends Fragment {
                     System.out.println("EMPTY STRING");
                 }
 
-
                 inputText.add(weight);
                 inputText.add(bodyFat);
                 inputText.add(age);
@@ -164,13 +160,6 @@ public class ProfileFragment extends Fragment {
                 inputText.add(rightLeg);
                 inputText.add(leftCalf);
                 inputText.add(rightCalf);
-
-
-
-
-
-
-
 
 
                 // LinkedHashMap<String, Double> exerciseMap = new LinkedHashMap<String, Double>();
@@ -197,7 +186,7 @@ public class ProfileFragment extends Fragment {
         btnGraph.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity() , Graph_Activity.class));
+                startActivity(new Intent(getActivity(), Graph_Activity.class));
             }
         });
 
