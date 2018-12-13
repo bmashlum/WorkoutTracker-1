@@ -13,7 +13,7 @@
 <img src="https://github.com/rwprice31/WorkoutTracker/blob/develop/Workouts.jpg" height ="400" width="200"></br>
   </div>
   <div class="column">
-    <b> Workout Example Video - hold workout down for 1 second</b> </br>
+    <b> Workout Example Videos - hold workout down for 1 second</b> </br>
 <img src="https://github.com/rwprice31/WorkoutTracker/blob/develop/Workout_Video2.jpg" height ="400" width="200"></br>
 <img src="https://github.com/rwprice31/WorkoutTracker/blob/develop/Workout_Video.jpg" height ="400" width="200"></br>
   </div>
